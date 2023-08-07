@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lista: Fichero Fuente /home/faustojh41014/EstructurasDeDatos/lista/src/main/c++/mx/edd/Lista.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lista<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_bba303ed94b4ea50a3997503402a7bd2.html">c++</a></li><li class="navelem"><a class="el" href="dir_724e791938cbd456ef54ac3ac083f090.html">mx</a></li><li class="navelem"><a class="el" href="dir_54fcd9e9523b10ff52c541c9b47bdccd.html">edd</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Lista.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Lista_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Coleccion_8hpp.html">Coleccion.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef LISTA_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define LISTA_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classLista.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLista.html">Lista</a> : <span class="keyword">public</span> <a class="code" href="classColeccion.html">Coleccion</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> longitud_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classLista.html#a0e460a5eea8b3f8ed7a0d1c5fdf461bd">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLista.html#a0e460a5eea8b3f8ed7a0d1c5fdf461bd">getLongitud</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">   45</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(T elemento);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classLista.html#a6598a7cd7914bc597d8eeb3e0e0b6b0a">   53</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a6598a7cd7914bc597d8eeb3e0e0b6b0a">agregaInicio</a>(T elemento);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classLista.html#a7c40d476795af5b614b9ca02198e7792">   62</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a7c40d476795af5b614b9ca02198e7792">inserta</a>(<span class="keywordtype">int</span> i, T elemento);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classLista.html#a05d0714c8087cc0937dc63537aa57c29">   70</a></span>&#160;    T <a class="code" href="classLista.html#a05d0714c8087cc0937dc63537aa57c29">eliminaPrimero</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classLista.html#addc6cbbd469cc6bc89b039da7b595210">   78</a></span>&#160;    T <a class="code" href="classLista.html#addc6cbbd469cc6bc89b039da7b595210">eliminaUltimo</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classLista.html#ac57bbb2870c0e6988f1834e6538d94a2">   86</a></span>&#160;    T <a class="code" href="classLista.html#ac57bbb2870c0e6988f1834e6538d94a2">getPrimero</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classLista.html#af01d85a076fe148343d81e70355ea1a5">   94</a></span>&#160;    T <a class="code" href="classLista.html#af01d85a076fe148343d81e70355ea1a5">getUltimo</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classLista.html#af4b8fce4b46de279b34a0c0bd9b2bcd0">  103</a></span>&#160;    T <a class="code" href="classLista.html#af4b8fce4b46de279b34a0c0bd9b2bcd0">get</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">  110</a></span>&#160;    <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* <a class="code" href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">copia</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">  117</a></span>&#160;    <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* <a class="code" href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">reversa</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classLista.html#ad4015dbc5ba14035dd44f1185ef87d25">  126</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLista.html#ad4015dbc5ba14035dd44f1185ef87d25">indiceDe</a>(T elemento); </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LISTA_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aColeccion_8hpp_html"><div class="ttname"><a href="Coleccion_8hpp.html">Coleccion.hpp</a></div><div class="ttdoc">Interface para colecciones.</div></div>
+<div class="ttc" id="aclassColeccion_html"><div class="ttname"><a href="classColeccion.html">Coleccion</a></div><div class="ttdef"><b>Definition:</b> <a href="Coleccion_8hpp_source.html#l00013">Coleccion.hpp:13</a></div></div>
+<div class="ttc" id="aclassLista_html"><div class="ttname"><a href="classLista.html">Lista</a></div><div class="ttdef"><b>Definition:</b> <a href="Lista_8hpp_source.html#l00018">Lista.hpp:18</a></div></div>
+<div class="ttc" id="aclassLista_html_a05d0714c8087cc0937dc63537aa57c29"><div class="ttname"><a href="classLista.html#a05d0714c8087cc0937dc63537aa57c29">Lista::eliminaPrimero</a></div><div class="ttdeci">T eliminaPrimero()</div><div class="ttdoc">Elimina el primer elemento de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_a0e460a5eea8b3f8ed7a0d1c5fdf461bd"><div class="ttname"><a href="classLista.html#a0e460a5eea8b3f8ed7a0d1c5fdf461bd">Lista::getLongitud</a></div><div class="ttdeci">int getLongitud()</div><div class="ttdoc">Regresa el número de elementos de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_a3a24c5d326773088e5fbd56e8b249207"><div class="ttname"><a href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">Lista::copia</a></div><div class="ttdeci">Lista&lt; T &gt; * copia()</div><div class="ttdoc">Regresamos un puntero a la copia de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_a6598a7cd7914bc597d8eeb3e0e0b6b0a"><div class="ttname"><a href="classLista.html#a6598a7cd7914bc597d8eeb3e0e0b6b0a">Lista::agregaInicio</a></div><div class="ttdeci">void agregaInicio(T elemento)</div><div class="ttdoc">Agrega un elemento al final de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_a7c40d476795af5b614b9ca02198e7792"><div class="ttname"><a href="classLista.html#a7c40d476795af5b614b9ca02198e7792">Lista::inserta</a></div><div class="ttdeci">void inserta(int i, T elemento)</div><div class="ttdoc">Inserta un elemento en un índice explícito.</div></div>
+<div class="ttc" id="aclassLista_html_a86fd8392e2c7b49b89fed7f8e0a202a5"><div class="ttname"><a href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">Lista::reversa</a></div><div class="ttdeci">Lista&lt; T &gt; * reversa()</div><div class="ttdoc">Regresamos un puntero a una reversa de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_ac032095f5cacf7efc7e34c8ec0fd7da6"><div class="ttname"><a href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">Lista::agregaFinal</a></div><div class="ttdeci">void agregaFinal(T elemento)</div><div class="ttdoc">Agrega un elemento al final de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_ac57bbb2870c0e6988f1834e6538d94a2"><div class="ttname"><a href="classLista.html#ac57bbb2870c0e6988f1834e6538d94a2">Lista::getPrimero</a></div><div class="ttdeci">T getPrimero()</div><div class="ttdoc">Regresa el primer elemento de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_ad4015dbc5ba14035dd44f1185ef87d25"><div class="ttname"><a href="classLista.html#ad4015dbc5ba14035dd44f1185ef87d25">Lista::indiceDe</a></div><div class="ttdeci">int indiceDe(T elemento)</div><div class="ttdoc">Regresamos el índice del elemento recibido en la lista.</div></div>
+<div class="ttc" id="aclassLista_html_addc6cbbd469cc6bc89b039da7b595210"><div class="ttname"><a href="classLista.html#addc6cbbd469cc6bc89b039da7b595210">Lista::eliminaUltimo</a></div><div class="ttdeci">T eliminaUltimo()</div><div class="ttdoc">Elimina el último elemento de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_af01d85a076fe148343d81e70355ea1a5"><div class="ttname"><a href="classLista.html#af01d85a076fe148343d81e70355ea1a5">Lista::getUltimo</a></div><div class="ttdeci">T getUltimo()</div><div class="ttdoc">Regresa el último elemento de la lista.</div></div>
+<div class="ttc" id="aclassLista_html_af4b8fce4b46de279b34a0c0bd9b2bcd0"><div class="ttname"><a href="classLista.html#af4b8fce4b46de279b34a0c0bd9b2bcd0">Lista::get</a></div><div class="ttdeci">T get(int i)</div><div class="ttdoc">Regresa el i-ésimo elemento de la lista.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

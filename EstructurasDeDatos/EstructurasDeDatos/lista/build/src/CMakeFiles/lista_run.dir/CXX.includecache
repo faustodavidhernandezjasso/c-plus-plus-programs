@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/faustojh41014/EstructurasDeDatos/lista/src/main/c++/mx/edd/Coleccion.hpp
+
+/home/faustojh41014/EstructurasDeDatos/lista/src/main/c++/mx/edd/Lista.cpp
+iostream
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+sstream
+-
+iterator
+-
+stdexcept
+-
+Coleccion.hpp
+/home/faustojh41014/EstructurasDeDatos/lista/src/main/c++/mx/edd/Coleccion.hpp
+
+/home/faustojh41014/EstructurasDeDatos/lista/src/main/c++/mx/edd/Main.cpp
+iostream
+-
+stdlib.h
+-
+stdio.h
+-
+ctime
+-
+iterator
+-
+Lista.cpp
+/home/faustojh41014/EstructurasDeDatos/lista/src/main/c++/mx/edd/Lista.cpp
+

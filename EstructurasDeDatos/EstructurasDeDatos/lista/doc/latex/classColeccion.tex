@@ -1,0 +1,163 @@
+\hypertarget{classColeccion}{}\doxysection{Referencia de la plantilla de la Clase Coleccion$<$ T $>$}
+\label{classColeccion}\index{Coleccion$<$ T $>$@{Coleccion$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Coleccion.\+hpp$>$}
+
+Diagrama de herencias de Coleccion$<$ T $>$\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classColeccion}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classColeccion_a7820976d2831ce8c267a7efe981417ac}{agrega}} (T elemento)=0
+\begin{DoxyCompactList}\small\item\em Agrega un elemento a la colección. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classColeccion_a916a60c426e9dd1e0cda225cc2868785}{elimina}} (T elemento)=0
+\begin{DoxyCompactList}\small\item\em Elimina un elemento de la colección. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classColeccion_ab7625e7bf446f3be38cc3c2b7c21df65}{contiene}} (T elemento)=0
+\begin{DoxyCompactList}\small\item\em Nos indica sí un elemento pertene a la colección. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classColeccion_adaa85430f0532e947433fa5f46089de6}{es\+Vacia}} ()=0
+\begin{DoxyCompactList}\small\item\em Nos indica sí la colección está vacía, es decir, no tiene ningún elemento. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classColeccion_adec36d0edbb991786de7548596a238ad}{get\+Elementos}} ()=0
+\begin{DoxyCompactList}\small\item\em Nos regresa el número de elementos de la colección. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classColeccion_aa403eb962eb5797ce2896a5a81bbfa5d}{limpia}} ()=0
+\begin{DoxyCompactList}\small\item\em Limpia la colección. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Coleccion$<$ T $>$}
+
+
+Definición en la línea 13 del archivo Coleccion.\+hpp.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classColeccion_a7820976d2831ce8c267a7efe981417ac}\label{classColeccion_a7820976d2831ce8c267a7efe981417ac}} 
+\index{Coleccion$<$ T $>$@{Coleccion$<$ T $>$}!agrega@{agrega}}
+\index{agrega@{agrega}!Coleccion$<$ T $>$@{Coleccion$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{agrega()}{agrega()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classColeccion}{Coleccion}}$<$ T $>$\+::agrega (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Agrega un elemento a la colección. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & a agregar. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si el elemento es nulo. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementado en \mbox{\hyperlink{classLista_a6b110121436300dcafafd0dbde66b3a7}{Lista$<$ T $>$}}.
+
+\mbox{\Hypertarget{classColeccion_ab7625e7bf446f3be38cc3c2b7c21df65}\label{classColeccion_ab7625e7bf446f3be38cc3c2b7c21df65}} 
+\index{Coleccion$<$ T $>$@{Coleccion$<$ T $>$}!contiene@{contiene}}
+\index{contiene@{contiene}!Coleccion$<$ T $>$@{Coleccion$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contiene()}{contiene()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{classColeccion}{Coleccion}}$<$ T $>$\+::contiene (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Nos indica sí un elemento pertene a la colección. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & que queremos verificar que pertenece a la colección. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} si el elemento pertenece a la colección, {\ttfamily false} en otro caso. 
+\end{DoxyReturn}
+
+
+Implementado en \mbox{\hyperlink{classLista_a3257e3d3c45b1c3cb11d0ff19edcdfea}{Lista$<$ T $>$}}.
+
+\mbox{\Hypertarget{classColeccion_a916a60c426e9dd1e0cda225cc2868785}\label{classColeccion_a916a60c426e9dd1e0cda225cc2868785}} 
+\index{Coleccion$<$ T $>$@{Coleccion$<$ T $>$}!elimina@{elimina}}
+\index{elimina@{elimina}!Coleccion$<$ T $>$@{Coleccion$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{elimina()}{elimina()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classColeccion}{Coleccion}}$<$ T $>$\+::elimina (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Elimina un elemento de la colección. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & a eliminar. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado en \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{Lista$<$ T $>$}}.
+
+\mbox{\Hypertarget{classColeccion_adaa85430f0532e947433fa5f46089de6}\label{classColeccion_adaa85430f0532e947433fa5f46089de6}} 
+\index{Coleccion$<$ T $>$@{Coleccion$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!Coleccion$<$ T $>$@{Coleccion$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual bool \mbox{\hyperlink{classColeccion}{Coleccion}}$<$ T $>$\+::es\+Vacia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Nos indica sí la colección está vacía, es decir, no tiene ningún elemento. 
+
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} si la colección está vacía, {\ttfamily false} en otro caso. 
+\end{DoxyReturn}
+
+
+Implementado en \mbox{\hyperlink{classLista_a60c926b4a656a0c6345a7b3f65db842c}{Lista$<$ T $>$}}.
+
+\mbox{\Hypertarget{classColeccion_adec36d0edbb991786de7548596a238ad}\label{classColeccion_adec36d0edbb991786de7548596a238ad}} 
+\index{Coleccion$<$ T $>$@{Coleccion$<$ T $>$}!getElementos@{getElementos}}
+\index{getElementos@{getElementos}!Coleccion$<$ T $>$@{Coleccion$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getElementos()}{getElementos()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual int \mbox{\hyperlink{classColeccion}{Coleccion}}$<$ T $>$\+::get\+Elementos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Nos regresa el número de elementos de la colección. 
+
+\begin{DoxyReturn}{Devuelve}
+el número de elementos de la colección. 
+\end{DoxyReturn}
+
+
+Implementado en \mbox{\hyperlink{classLista_a6a58d9e1913ca5f1c02b64164712b620}{Lista$<$ T $>$}}.
+
+\mbox{\Hypertarget{classColeccion_aa403eb962eb5797ce2896a5a81bbfa5d}\label{classColeccion_aa403eb962eb5797ce2896a5a81bbfa5d}} 
+\index{Coleccion$<$ T $>$@{Coleccion$<$ T $>$}!limpia@{limpia}}
+\index{limpia@{limpia}!Coleccion$<$ T $>$@{Coleccion$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{limpia()}{limpia()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classColeccion}{Coleccion}}$<$ T $>$\+::limpia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Limpia la colección. 
+
+Después de la ejecución, la colección está vacía. 
+
+Implementado en \mbox{\hyperlink{classLista_a95981afce9cc430cfb1b69803e6efd4d}{Lista$<$ T $>$}}.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/lista/src/main/c++/mx/edd/\mbox{\hyperlink{Coleccion_8hpp}{Coleccion.\+hpp}}\end{DoxyCompactItemize}

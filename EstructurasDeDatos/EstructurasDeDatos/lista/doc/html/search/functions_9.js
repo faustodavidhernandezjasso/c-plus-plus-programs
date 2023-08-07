@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['operator_21_3d_82',['operator!=',['../classLista_1_1const__iterator.html#ab859a763502df616bc63b8875bcff3c4',1,'Lista::const_iterator']]],
+  ['operator_2a_83',['operator*',['../classLista_1_1const__iterator.html#a78337698383da17355511b444a645d4d',1,'Lista::const_iterator::operator*()'],['../classLista_1_1iterator.html#a13c0f64792c5e891119b8b1ff6467c4a',1,'Lista::iterator::operator*()'],['../classLista_1_1iterator.html#a3db5a8852dcf7362b8e426573bec82d7',1,'Lista::iterator::operator*() const']]],
+  ['operator_2b_2b_84',['operator++',['../classLista_1_1const__iterator.html#aaec39f74668242c34550a44409ab7dd0',1,'Lista::const_iterator::operator++()'],['../classLista_1_1const__iterator.html#a5c2ef5d0e6a8c17624120fe05acaaf92',1,'Lista::const_iterator::operator++(int)'],['../classLista_1_1iterator.html#adcc935c3094927d08b6681383d2a50e2',1,'Lista::iterator::operator++()'],['../classLista_1_1iterator.html#ab9acadb013834347decfb0dec501c67e',1,'Lista::iterator::operator++(int)']]],
+  ['operator_2d_2d_85',['operator--',['../classLista_1_1const__iterator.html#a53bb2e4373e0add7f45b06f343c71ba0',1,'Lista::const_iterator::operator--()'],['../classLista_1_1const__iterator.html#a4a417ddb73f698a9ce83f3eb0aee2ca3',1,'Lista::const_iterator::operator--(int)'],['../classLista_1_1iterator.html#a627b0d48b63e722ac6482202fa55ff56',1,'Lista::iterator::operator--()'],['../classLista_1_1iterator.html#afe3a372cf022c73557a2decb493d7e54',1,'Lista::iterator::operator--(int)']]],
+  ['operator_3d_3d_86',['operator==',['../classLista_1_1const__iterator.html#a57046bf39a5fb89d23f6248b207884f5',1,'Lista::const_iterator']]]
+];

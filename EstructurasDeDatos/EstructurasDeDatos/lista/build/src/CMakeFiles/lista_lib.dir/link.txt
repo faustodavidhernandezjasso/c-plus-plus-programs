@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblista_lib.a  CMakeFiles/lista_lib.dir/main/c++/mx/edd/Lista.cpp.o CMakeFiles/lista_lib.dir/main/c++/mx/edd/Main.cpp.o
+/usr/bin/ranlib liblista_lib.a

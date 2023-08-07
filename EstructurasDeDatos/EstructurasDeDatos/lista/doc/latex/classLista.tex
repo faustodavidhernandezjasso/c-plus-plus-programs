@@ -1,0 +1,1287 @@
+\hypertarget{classLista}{}\doxysection{Referencia de la plantilla de la Clase Lista$<$ T $>$}
+\label{classLista}\index{Lista$<$ T $>$@{Lista$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Lista.\+hpp$>$}
+
+Diagrama de herencias de Lista$<$ T $>$\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLista}
+\end{center}
+\end{figure}
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Clase para iteradores. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classLista_1_1iterator}{iterator}}
+\begin{DoxyCompactList}\small\item\em Clase para iteradores. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classLista_1_1Nodo}{Nodo}}
+\begin{DoxyCompactList}\small\item\em Clase interna privada para nodos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classLista_a37d07dd9b2e41f9779a280c8632f46bd}{$\sim$\+Lista}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a6b110121436300dcafafd0dbde66b3a7}{agrega}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Agrega un elemento a la colección. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Elimina un elemento de la colección. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLista_a3257e3d3c45b1c3cb11d0ff19edcdfea}{contiene}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Nos indica sí un elemento pertene a la colección. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLista_a60c926b4a656a0c6345a7b3f65db842c}{es\+Vacia}} ()
+\begin{DoxyCompactList}\small\item\em Nos indica sí la colección está vacía, es decir, no tiene ningún elemento. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLista_a6a58d9e1913ca5f1c02b64164712b620}{get\+Elementos}} ()
+\begin{DoxyCompactList}\small\item\em Nos regresa el número de elementos de la colección. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a95981afce9cc430cfb1b69803e6efd4d}{limpia}} ()
+\begin{DoxyCompactList}\small\item\em Limpia la colección. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLista_ae5adc54ec0f6cef36e86ad61b493e5ab}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Representación en cadena de las listas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{get\+Longitud}} ()
+\begin{DoxyCompactList}\small\item\em Regresa el número de elementos de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}{agrega\+Final}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Agrega un elemento al final de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a6598a7cd7914bc597d8eeb3e0e0b6b0a}{agrega\+Inicio}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Agrega un elemento al final de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a7c40d476795af5b614b9ca02198e7792}{inserta}} (int i, T elemento)
+\begin{DoxyCompactList}\small\item\em Inserta un elemento en un índice explícito. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_a05d0714c8087cc0937dc63537aa57c29}{elimina\+Primero}} ()
+\begin{DoxyCompactList}\small\item\em Elimina el primer elemento de la lista. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_addc6cbbd469cc6bc89b039da7b595210}{elimina\+Ultimo}} ()
+\begin{DoxyCompactList}\small\item\em Elimina el último elemento de la lista. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_ac57bbb2870c0e6988f1834e6538d94a2}{get\+Primero}} ()
+\begin{DoxyCompactList}\small\item\em Regresa el primer elemento de la lista. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_af01d85a076fe148343d81e70355ea1a5}{get\+Ultimo}} ()
+\begin{DoxyCompactList}\small\item\em Regresa el último elemento de la lista. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_af4b8fce4b46de279b34a0c0bd9b2bcd0}{get}} (int i)
+\begin{DoxyCompactList}\small\item\em Regresa el {\itshape i}-\/ésimo elemento de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_a3a24c5d326773088e5fbd56e8b249207}{copia}} ()
+\begin{DoxyCompactList}\small\item\em Regresamos un puntero a la copia de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}{reversa}} ()
+\begin{DoxyCompactList}\small\item\em Regresamos un puntero a una reversa de la lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLista_ad4015dbc5ba14035dd44f1185ef87d25}{indice\+De}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Regresamos el índice del elemento recibido en la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1iterator}{iterator}} \mbox{\hyperlink{classLista_a6e3fd030d96b421dead3de5c0a0f1d6f}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Mueve el iterador al inicio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classLista_afece5da6b5519b6749d0304bfdae829a}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Mueve el iterador al inicio. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1iterator}{iterator}} \mbox{\hyperlink{classLista_a5249c778668cf965ca9f7e316d369ee3}{end}} ()
+\begin{DoxyCompactList}\small\item\em Mueve el iterador al final. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classLista_ae1a548d9c63c8d20db5cec04506bca40}{end}} () const
+\begin{DoxyCompactList}\small\item\em Mueve el iterador al final. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{get\+Longitud}} ()
+\begin{DoxyCompactList}\small\item\em Regresa el número de elementos de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}{agrega\+Final}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Agrega un elemento al final de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a6598a7cd7914bc597d8eeb3e0e0b6b0a}{agrega\+Inicio}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Agrega un elemento al final de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a7c40d476795af5b614b9ca02198e7792}{inserta}} (int i, T elemento)
+\begin{DoxyCompactList}\small\item\em Inserta un elemento en un índice explícito. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_a05d0714c8087cc0937dc63537aa57c29}{elimina\+Primero}} ()
+\begin{DoxyCompactList}\small\item\em Elimina el primer elemento de la lista. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_addc6cbbd469cc6bc89b039da7b595210}{elimina\+Ultimo}} ()
+\begin{DoxyCompactList}\small\item\em Elimina el último elemento de la lista. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_ac57bbb2870c0e6988f1834e6538d94a2}{get\+Primero}} ()
+\begin{DoxyCompactList}\small\item\em Regresa el primer elemento de la lista. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_af01d85a076fe148343d81e70355ea1a5}{get\+Ultimo}} ()
+\begin{DoxyCompactList}\small\item\em Regresa el último elemento de la lista. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classLista_af4b8fce4b46de279b34a0c0bd9b2bcd0}{get}} (int i)
+\begin{DoxyCompactList}\small\item\em Regresa el {\itshape i}-\/ésimo elemento de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_a3a24c5d326773088e5fbd56e8b249207}{copia}} ()
+\begin{DoxyCompactList}\small\item\em Regresamos un puntero a la copia de la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}{reversa}} ()
+\begin{DoxyCompactList}\small\item\em Regresamos un puntero a una reversa de la lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLista_ad4015dbc5ba14035dd44f1185ef87d25}{indice\+De}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Regresamos el índice del elemento recibido en la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classLista_a90bb9992fc9e33eb3a0c7c7fca5ade93}{operator$<$$<$}} (std\+::ostream \&strm, const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&lista)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador $<$$<$. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLista_a61e3b12b33b2c4008f7373c83f13a3df}{operator==}} (const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&lista, const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&l)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ==. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLista_a59acc9f2302e1b6b448beca58888abba}{operator!=}} (const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&lista, const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&l)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ==. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Lista$<$ T $>$}
+
+
+Definición en la línea 18 del archivo Lista.\+hpp.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classLista_a37d07dd9b2e41f9779a280c8632f46bd}\label{classLista_a37d07dd9b2e41f9779a280c8632f46bd}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!````~Lista@{$\sim$Lista}}
+\index{````~Lista@{$\sim$Lista}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Lista()}{~Lista()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classLista}{Lista}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definición en la línea 328 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{328                      \{}
+\DoxyCodeLine{329         \mbox{\hyperlink{classLista_a95981afce9cc430cfb1b69803e6efd4d}{limpia}}();}
+\DoxyCodeLine{330     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classLista_a6b110121436300dcafafd0dbde66b3a7}\label{classLista_a6b110121436300dcafafd0dbde66b3a7}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!agrega@{agrega}}
+\index{agrega@{agrega}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{agrega()}{agrega()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::agrega (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Agrega un elemento a la colección. 
+
+El método es idéntico a \mbox{\hyperlink{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}{agrega\+Final}}. 
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & a agregar. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si el elemento es nulo. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \mbox{\hyperlink{classColeccion_a7820976d2831ce8c267a7efe981417ac}{Coleccion$<$ T $>$}}.
+
+
+
+Definición en la línea 339 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{339                             \{}
+\DoxyCodeLine{340         Nodo<T>* nuevo = \textcolor{keyword}{new} Nodo<T>(elemento);}
+\DoxyCodeLine{341         this-\/>longitud\_ += 1;}
+\DoxyCodeLine{342         \textcolor{keywordflow}{if} (rabo\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{343             cabeza\_ = rabo\_ = nuevo;}
+\DoxyCodeLine{344         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{345             rabo\_-\/>siguiente\_ = nuevo;}
+\DoxyCodeLine{346             nuevo-\/>anterior\_ = rabo\_;}
+\DoxyCodeLine{347             rabo\_ = nuevo;}
+\DoxyCodeLine{348         \}}
+\DoxyCodeLine{349     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}\label{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!agregaFinal@{agregaFinal}}
+\index{agregaFinal@{agregaFinal}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{agregaFinal()}{agregaFinal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::agrega\+Final (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un elemento al final de la lista. 
+
+El método es idéntico a \mbox{\hyperlink{classLista_a6b110121436300dcafafd0dbde66b3a7}{agrega}}. 
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento a agregar. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si {\ttfamily elemento} es nulo. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 517 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{517                                  \{}
+\DoxyCodeLine{518         \textcolor{keywordflow}{if} (!elemento) \{}
+\DoxyCodeLine{519             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}No se puede agregar el elemento a lista"{}});}
+\DoxyCodeLine{520         \}}
+\DoxyCodeLine{521         Nodo<T>* nuevo = \textcolor{keyword}{new} Nodo<T>(elemento);}
+\DoxyCodeLine{522         this-\/>longitud\_ += 1;}
+\DoxyCodeLine{523         \textcolor{keywordflow}{if} (this-\/>rabo\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{524             this-\/>cabeza\_ = this-\/>rabo\_ = nuevo;}
+\DoxyCodeLine{525         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{526             this-\/>rabo\_-\/>siguiente\_ = nuevo;}
+\DoxyCodeLine{527             nuevo-\/>anterior\_ = this-\/>rabo\_;}
+\DoxyCodeLine{528             this-\/>rabo\_ = nuevo;}
+\DoxyCodeLine{529         \}}
+\DoxyCodeLine{530     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}\label{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!agregaFinal@{agregaFinal}}
+\index{agregaFinal@{agregaFinal}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{agregaFinal()}{agregaFinal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::agrega\+Final (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Agrega un elemento al final de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento a agregar. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si {\ttfamily elemento} es nulo. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classLista_a6598a7cd7914bc597d8eeb3e0e0b6b0a}\label{classLista_a6598a7cd7914bc597d8eeb3e0e0b6b0a}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!agregaInicio@{agregaInicio}}
+\index{agregaInicio@{agregaInicio}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{agregaInicio()}{agregaInicio()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::agrega\+Inicio (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un elemento al final de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento a agregar. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si {\ttfamily elemento} es nulo. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 538 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{538                                   \{}
+\DoxyCodeLine{539         \textcolor{keywordflow}{if} (!elemento) \{}
+\DoxyCodeLine{540             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}No se puede agregar el elemento a lista"{}});}
+\DoxyCodeLine{541         \}}
+\DoxyCodeLine{542         Nodo<T>* nuevo = \textcolor{keyword}{new} Nodo<T>(elemento);}
+\DoxyCodeLine{543         this-\/>longitud\_ += 1;}
+\DoxyCodeLine{544         \textcolor{keywordflow}{if} (this-\/>cabeza\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{545             this-\/>cabeza\_ = this-\/>rabo\_ = nuevo;}
+\DoxyCodeLine{546         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{547             this-\/>cabeza\_-\/>anterior\_ = nuevo;}
+\DoxyCodeLine{548             nuevo-\/>siguiente\_ = this-\/>cabeza\_;}
+\DoxyCodeLine{549             this-\/>cabeza\_ = nuevo;}
+\DoxyCodeLine{550         \}}
+\DoxyCodeLine{551     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a6598a7cd7914bc597d8eeb3e0e0b6b0a}\label{classLista_a6598a7cd7914bc597d8eeb3e0e0b6b0a}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!agregaInicio@{agregaInicio}}
+\index{agregaInicio@{agregaInicio}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{agregaInicio()}{agregaInicio()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::agrega\+Inicio (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Agrega un elemento al final de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento a agregar. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si {\ttfamily elemento} es nulo. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classLista_a6e3fd030d96b421dead3de5c0a0f1d6f}\label{classLista_a6e3fd030d96b421dead3de5c0a0f1d6f}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1iterator}{iterator}} \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mueve el iterador al inicio. 
+
+\begin{DoxyReturn}{Devuelve}
+un iterador que apunta al inicio de la lista. 
+\end{DoxyReturn}
+
+
+Definición en la línea 727 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{727                      \{}
+\DoxyCodeLine{728         iterator it = this-\/>cabeza\_;}
+\DoxyCodeLine{729         \textcolor{keywordflow}{return} it;}
+\DoxyCodeLine{730     \}  }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_afece5da6b5519b6749d0304bfdae829a}\label{classLista_afece5da6b5519b6749d0304bfdae829a}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mueve el iterador al inicio. 
+
+\begin{DoxyReturn}{Devuelve}
+un iterador que apunta al inicio de la lista. 
+\end{DoxyReturn}
+
+
+Definición en la línea 737 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{737                                  \{}
+\DoxyCodeLine{738         const\_iterator it = this-\/>cabeza\_;}
+\DoxyCodeLine{739         \textcolor{keywordflow}{return} it;}
+\DoxyCodeLine{740     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a3257e3d3c45b1c3cb11d0ff19edcdfea}\label{classLista_a3257e3d3c45b1c3cb11d0ff19edcdfea}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!contiene@{contiene}}
+\index{contiene@{contiene}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contiene()}{contiene()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::contiene (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Nos indica sí un elemento pertene a la colección. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & que queremos verificar que pertenece a la colección. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} si el elemento pertenece a la colección, {\ttfamily false} en otro caso. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classColeccion_ab7625e7bf446f3be38cc3c2b7c21df65}{Coleccion$<$ T $>$}}.
+
+
+
+Definición en la línea 389 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{389                               \{}
+\DoxyCodeLine{390         Nodo<T>* nodo = buscaNodo(elemento);}
+\DoxyCodeLine{391         \textcolor{keywordflow}{if} (nodo == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{392             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{393         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{394             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{395         \}}
+\DoxyCodeLine{396     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a3a24c5d326773088e5fbd56e8b249207}\label{classLista_a3a24c5d326773088e5fbd56e8b249207}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!copia@{copia}}
+\index{copia@{copia}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copia()}{copia()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$T$>$$\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::copia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Regresamos un puntero a la copia de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+un puntero a una copia de la lista. 
+\end{DoxyReturn}
+
+
+Definición en la línea 677 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{677                       \{}
+\DoxyCodeLine{678         Nodo<T>* nodo = this-\/>cabeza\_;}
+\DoxyCodeLine{679         \mbox{\hyperlink{classLista}{Lista<T>}}* \mbox{\hyperlink{classLista_a3a24c5d326773088e5fbd56e8b249207}{copia}} = \textcolor{keyword}{new} \mbox{\hyperlink{classLista}{Lista<T>}}();}
+\DoxyCodeLine{680         \textcolor{keywordflow}{while} (nodo != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{681             \mbox{\hyperlink{classLista_a3a24c5d326773088e5fbd56e8b249207}{copia}}-\/>agregaFinal(nodo-\/>elemento\_);}
+\DoxyCodeLine{682             nodo = nodo-\/>siguiente\_;}
+\DoxyCodeLine{683         \}}
+\DoxyCodeLine{684         \textcolor{keywordflow}{return} \mbox{\hyperlink{classLista_a3a24c5d326773088e5fbd56e8b249207}{copia}};}
+\DoxyCodeLine{685     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a3a24c5d326773088e5fbd56e8b249207}\label{classLista_a3a24c5d326773088e5fbd56e8b249207}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!copia@{copia}}
+\index{copia@{copia}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{copia()}{copia()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$T$>$$\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::copia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Regresamos un puntero a la copia de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+un puntero a una copia de la lista. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLista_a06f3a733528037a2057915ec03f307c4}\label{classLista_a06f3a733528037a2057915ec03f307c4}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!elimina@{elimina}}
+\index{elimina@{elimina}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{elimina()}{elimina()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::elimina (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Elimina un elemento de la colección. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & a eliminar. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{classColeccion_a916a60c426e9dd1e0cda225cc2868785}{Coleccion$<$ T $>$}}.
+
+
+
+Definición en la línea 356 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{356                              \{}
+\DoxyCodeLine{357         Nodo<T>* \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}} = buscaNodo(elemento);}
+\DoxyCodeLine{358         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}} == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{359             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{360         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{361             this-\/>longitud\_ -\/= 1;}
+\DoxyCodeLine{362             \textcolor{keywordflow}{if} ((cabeza\_-\/>elemento\_ == \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}}-\/>elemento\_) \&\& (rabo\_-\/>elemento\_ == \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}}-\/>elemento\_)) \{}
+\DoxyCodeLine{363                 cabeza\_ = rabo\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{364             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cabeza\_-\/>elemento\_ == \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}}-\/>elemento\_) \{}
+\DoxyCodeLine{365                 Nodo<T>* siguiente = cabeza\_-\/>siguiente\_;}
+\DoxyCodeLine{366                 siguiente-\/>anterior\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{367                 cabeza\_ = siguiente;}
+\DoxyCodeLine{368             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (rabo\_-\/>elemento\_ == \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}}-\/>elemento\_) \{}
+\DoxyCodeLine{369                 Nodo<T>* anterior = rabo\_-\/>anterior\_;}
+\DoxyCodeLine{370                 anterior-\/>siguiente\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{371                 rabo\_ = anterior;}
+\DoxyCodeLine{372             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{373                 Nodo<T>* anterior = \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}}-\/>anterior\_;}
+\DoxyCodeLine{374                 Nodo<T>* siguiente = \mbox{\hyperlink{classLista_a06f3a733528037a2057915ec03f307c4}{elimina}}-\/>siguiente\_;}
+\DoxyCodeLine{375                 anterior-\/>siguiente\_ = siguiente;}
+\DoxyCodeLine{376                 siguiente-\/>anterior\_ = anterior;}
+\DoxyCodeLine{377             \}}
+\DoxyCodeLine{378         \}}
+\DoxyCodeLine{379 }
+\DoxyCodeLine{380     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a05d0714c8087cc0937dc63537aa57c29}\label{classLista_a05d0714c8087cc0937dc63537aa57c29}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!eliminaPrimero@{eliminaPrimero}}
+\index{eliminaPrimero@{eliminaPrimero}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eliminaPrimero()}{eliminaPrimero()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::elimina\+Primero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina el primer elemento de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+el primer elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 586 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{586                        \{}
+\DoxyCodeLine{587         \textcolor{keywordflow}{if} (this-\/>cabeza\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{588             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}Lista vacía"{}});}
+\DoxyCodeLine{589         \}}
+\DoxyCodeLine{590         this-\/>longitud\_ -\/= 1;}
+\DoxyCodeLine{591         T elemento = this-\/>cabeza\_-\/>elemento\_;}
+\DoxyCodeLine{592         \textcolor{keywordflow}{if} (this-\/>longitud\_ == 0) \{}
+\DoxyCodeLine{593             this-\/>cabeza\_ = this-\/>rabo\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{594         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{595             Nodo<T>* siguiente = this-\/>cabeza\_-\/>siguiente\_;}
+\DoxyCodeLine{596             siguiente-\/>anterior\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{597             this-\/>cabeza\_ = siguiente;}
+\DoxyCodeLine{598         \}}
+\DoxyCodeLine{599         \textcolor{keywordflow}{return} elemento;}
+\DoxyCodeLine{600     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a05d0714c8087cc0937dc63537aa57c29}\label{classLista_a05d0714c8087cc0937dc63537aa57c29}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!eliminaPrimero@{eliminaPrimero}}
+\index{eliminaPrimero@{eliminaPrimero}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eliminaPrimero()}{eliminaPrimero()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::elimina\+Primero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Elimina el primer elemento de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+el primer elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classLista_addc6cbbd469cc6bc89b039da7b595210}\label{classLista_addc6cbbd469cc6bc89b039da7b595210}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!eliminaUltimo@{eliminaUltimo}}
+\index{eliminaUltimo@{eliminaUltimo}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eliminaUltimo()}{eliminaUltimo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::elimina\+Ultimo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina el último elemento de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+el último elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 608 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{608                       \{}
+\DoxyCodeLine{609         \textcolor{keywordflow}{if} (this-\/>rabo\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{610             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}Lista vacía"{}});}
+\DoxyCodeLine{611         \}}
+\DoxyCodeLine{612         this-\/>longitud\_ -\/= 1;}
+\DoxyCodeLine{613         T elemento = this-\/>rabo\_-\/>elemento\_;}
+\DoxyCodeLine{614         \textcolor{keywordflow}{if} (this-\/>longitud\_ == 0) \{}
+\DoxyCodeLine{615             this-\/>cabeza\_ = this-\/>rabo\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{616         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{617             Nodo<T>* anterior = this-\/>rabo\_-\/>anterior\_;}
+\DoxyCodeLine{618             anterior-\/>siguiente\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{619             this-\/>rabo\_ = anterior;}
+\DoxyCodeLine{620         \}}
+\DoxyCodeLine{621         \textcolor{keywordflow}{return} elemento;}
+\DoxyCodeLine{622     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_addc6cbbd469cc6bc89b039da7b595210}\label{classLista_addc6cbbd469cc6bc89b039da7b595210}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!eliminaUltimo@{eliminaUltimo}}
+\index{eliminaUltimo@{eliminaUltimo}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eliminaUltimo()}{eliminaUltimo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::elimina\+Ultimo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Elimina el último elemento de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+el último elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classLista_a5249c778668cf965ca9f7e316d369ee3}\label{classLista_a5249c778668cf965ca9f7e316d369ee3}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!end@{end}}
+\index{end@{end}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1iterator}{iterator}} \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mueve el iterador al final. 
+
+\begin{DoxyReturn}{Devuelve}
+un iterador que apunta al final de la lista. 
+\end{DoxyReturn}
+
+
+Definición en la línea 747 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{747                    \{}
+\DoxyCodeLine{748         iterator it = this-\/>rabo\_;}
+\DoxyCodeLine{749         \textcolor{keywordflow}{return} it;}
+\DoxyCodeLine{750     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_ae1a548d9c63c8d20db5cec04506bca40}\label{classLista_ae1a548d9c63c8d20db5cec04506bca40}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!end@{end}}
+\index{end@{end}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mueve el iterador al final. 
+
+\begin{DoxyReturn}{Devuelve}
+un iterador que apunta al final de la lista. 
+\end{DoxyReturn}
+
+
+Definición en la línea 757 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{757                                \{}
+\DoxyCodeLine{758         const\_iterator it = this-\/>rabo\_;}
+\DoxyCodeLine{759         \textcolor{keywordflow}{return} it;}
+\DoxyCodeLine{760     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a60c926b4a656a0c6345a7b3f65db842c}\label{classLista_a60c926b4a656a0c6345a7b3f65db842c}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::es\+Vacia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Nos indica sí la colección está vacía, es decir, no tiene ningún elemento. 
+
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} si la colección está vacía, {\ttfamily false} en otro caso. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classColeccion_adaa85430f0532e947433fa5f46089de6}{Coleccion$<$ T $>$}}.
+
+
+
+Definición en la línea 405 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{405                    \{}
+\DoxyCodeLine{406         \textcolor{keywordflow}{return} (cabeza\_ == \textcolor{keyword}{nullptr}) \&\& (rabo\_ == \textcolor{keyword}{nullptr}) \&\& (longitud\_ == 0);}
+\DoxyCodeLine{407     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_af4b8fce4b46de279b34a0c0bd9b2bcd0}\label{classLista_af4b8fce4b46de279b34a0c0bd9b2bcd0}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!get@{get}}
+\index{get@{get}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Regresa el {\itshape i}-\/ésimo elemento de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & el índice del elemento que queremos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el {\itshape i}-\/ésimo elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 657 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{657                  \{}
+\DoxyCodeLine{658         \textcolor{keywordflow}{if} (i < 0 || i >= this-\/>longitud\_) \{}
+\DoxyCodeLine{659             \textcolor{keywordflow}{throw} std::out\_of\_range(\textcolor{stringliteral}{"{}Índice inválido"{}});}
+\DoxyCodeLine{660         \}}
+\DoxyCodeLine{661         \textcolor{keywordtype}{int} contador = 0;}
+\DoxyCodeLine{662         Nodo<T>* auxiliar = this-\/>cabeza\_;}
+\DoxyCodeLine{663         \textcolor{keywordflow}{while} (auxiliar != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{664             \textcolor{keywordflow}{if} (contador == i) \{}
+\DoxyCodeLine{665                 \textcolor{keywordflow}{return} auxiliar-\/>elemento\_;}
+\DoxyCodeLine{666             \}}
+\DoxyCodeLine{667             contador += 1;}
+\DoxyCodeLine{668             auxiliar = auxiliar-\/>siguiente\_;}
+\DoxyCodeLine{669         \}}
+\DoxyCodeLine{670     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_af4b8fce4b46de279b34a0c0bd9b2bcd0}\label{classLista_af4b8fce4b46de279b34a0c0bd9b2bcd0}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!get@{get}}
+\index{get@{get}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Regresa el {\itshape i}-\/ésimo elemento de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & el índice del elemento que queremos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el {\itshape i}-\/ésimo elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classLista_a6a58d9e1913ca5f1c02b64164712b620}\label{classLista_a6a58d9e1913ca5f1c02b64164712b620}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getElementos@{getElementos}}
+\index{getElementos@{getElementos}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getElementos()}{getElementos()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Elementos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Nos regresa el número de elementos de la colección. 
+
+El método es idéntico a \mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{get\+Longitud}}. \begin{DoxyReturn}{Devuelve}
+el número de elementos de la colección. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classColeccion_adec36d0edbb991786de7548596a238ad}{Coleccion$<$ T $>$}}.
+
+
+
+Definición en la línea 415 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{415                        \{}
+\DoxyCodeLine{416         \textcolor{keywordflow}{return} this-\/>longitud\_;}
+\DoxyCodeLine{417     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}\label{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getLongitud@{getLongitud}}
+\index{getLongitud@{getLongitud}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getLongitud()}{getLongitud()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Longitud (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Regresa el número de elementos de la lista. 
+
+El método es idéntico a \mbox{\hyperlink{classLista_a6a58d9e1913ca5f1c02b64164712b620}{get\+Elementos}}. \begin{DoxyReturn}{Devuelve}
+la longitud de la lista. El número de elementos de la lista. 
+\end{DoxyReturn}
+
+
+Definición en la línea 506 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{506                       \{}
+\DoxyCodeLine{507         \textcolor{keywordflow}{return} this-\/>longitud\_;}
+\DoxyCodeLine{508     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}\label{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getLongitud@{getLongitud}}
+\index{getLongitud@{getLongitud}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getLongitud()}{getLongitud()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Longitud (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Regresa el número de elementos de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+la longitud de la lista. El número de elementos de la lista. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLista_ac57bbb2870c0e6988f1834e6538d94a2}\label{classLista_ac57bbb2870c0e6988f1834e6538d94a2}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getPrimero@{getPrimero}}
+\index{getPrimero@{getPrimero}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getPrimero()}{getPrimero()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Primero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Regresa el primer elemento de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+el primer elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 630 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{630                    \{}
+\DoxyCodeLine{631         \textcolor{keywordflow}{if} (this-\/>longitud\_ == 0) \{}
+\DoxyCodeLine{632             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}Lista vacía"{}});}
+\DoxyCodeLine{633         \}}
+\DoxyCodeLine{634         \textcolor{keywordflow}{return} this-\/>cabeza\_-\/>elemento\_;}
+\DoxyCodeLine{635     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_ac57bbb2870c0e6988f1834e6538d94a2}\label{classLista_ac57bbb2870c0e6988f1834e6538d94a2}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getPrimero@{getPrimero}}
+\index{getPrimero@{getPrimero}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getPrimero()}{getPrimero()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Primero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Regresa el primer elemento de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+el primer elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classLista_af01d85a076fe148343d81e70355ea1a5}\label{classLista_af01d85a076fe148343d81e70355ea1a5}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getUltimo@{getUltimo}}
+\index{getUltimo@{getUltimo}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getUltimo()}{getUltimo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Ultimo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Regresa el último elemento de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+el último elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 643 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{643                   \{}
+\DoxyCodeLine{644         \textcolor{keywordflow}{if} (this-\/>longitud\_ == 0) \{}
+\DoxyCodeLine{645             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}Lista vacía"{}});}
+\DoxyCodeLine{646         \}}
+\DoxyCodeLine{647         \textcolor{keywordflow}{return} this-\/>cabeza\_-\/>elemento\_;}
+\DoxyCodeLine{648     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_af01d85a076fe148343d81e70355ea1a5}\label{classLista_af01d85a076fe148343d81e70355ea1a5}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getUltimo@{getUltimo}}
+\index{getUltimo@{getUltimo}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getUltimo()}{getUltimo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Ultimo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Regresa el último elemento de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+el último elemento de la lista. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si la lista vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classLista_ad4015dbc5ba14035dd44f1185ef87d25}\label{classLista_ad4015dbc5ba14035dd44f1185ef87d25}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!indiceDe@{indiceDe}}
+\index{indiceDe@{indiceDe}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{indiceDe()}{indiceDe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::indice\+De (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Regresamos el índice del elemento recibido en la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento del que se busca el índice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el índice del elemento de la lista. Sí el elemento no está en lista regresamos -\/1. 
+\end{DoxyReturn}
+
+
+Definición en la línea 709 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{709                              \{}
+\DoxyCodeLine{710         \textcolor{keywordtype}{int} contador = 0;}
+\DoxyCodeLine{711         Nodo<T>* nodo = this-\/>cabeza\_;}
+\DoxyCodeLine{712         \textcolor{keywordflow}{while} (nodo != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{713             \textcolor{keywordflow}{if} (nodo-\/>elemento\_ == elemento) \{}
+\DoxyCodeLine{714                 \textcolor{keywordflow}{return} contador;}
+\DoxyCodeLine{715             \}}
+\DoxyCodeLine{716             contador += 1;}
+\DoxyCodeLine{717             nodo = nodo-\/>siguiente\_;}
+\DoxyCodeLine{718         \}}
+\DoxyCodeLine{719         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{720     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_ad4015dbc5ba14035dd44f1185ef87d25}\label{classLista_ad4015dbc5ba14035dd44f1185ef87d25}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!indiceDe@{indiceDe}}
+\index{indiceDe@{indiceDe}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{indiceDe()}{indiceDe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::indice\+De (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Regresamos el índice del elemento recibido en la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento del que se busca el índice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el índice del elemento de la lista. Sí el elemento no está en lista regresamos -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLista_a7c40d476795af5b614b9ca02198e7792}\label{classLista_a7c40d476795af5b614b9ca02198e7792}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!inserta@{inserta}}
+\index{inserta@{inserta}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inserta()}{inserta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::inserta (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserta un elemento en un índice explícito. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & el índice en dónde se va a insertar el elemento. \\
+\hline
+{\em elemento} & el elemento a insertar. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si {\ttfamily elemento} es nulo. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 560 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{560                                     \{}
+\DoxyCodeLine{561         \textcolor{keywordflow}{if} (!elemento) \{}
+\DoxyCodeLine{562             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}El elemento es nulo"{}});}
+\DoxyCodeLine{563         \}}
+\DoxyCodeLine{564         \textcolor{keywordflow}{if} (i < 1) \{}
+\DoxyCodeLine{565             \mbox{\hyperlink{classLista_a6598a7cd7914bc597d8eeb3e0e0b6b0a}{agregaInicio}}(elemento);}
+\DoxyCodeLine{566         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i > this-\/>longitud\_ -\/ 1) \{}
+\DoxyCodeLine{567             \mbox{\hyperlink{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}{agregaFinal}}(elemento);}
+\DoxyCodeLine{568         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{569             this-\/>longitud\_ += 1;}
+\DoxyCodeLine{570             Nodo<T>* nodo = \textcolor{keyword}{new} Nodo<T>(elemento);}
+\DoxyCodeLine{571             Nodo<T>* s = iesimoNodo(i);}
+\DoxyCodeLine{572             Nodo<T>* a = s-\/>anterior\_;}
+\DoxyCodeLine{573             nodo-\/>anterior\_ = a;}
+\DoxyCodeLine{574             a-\/>siguiente\_ = nodo;}
+\DoxyCodeLine{575             nodo-\/>siguiente\_ = s;}
+\DoxyCodeLine{576             s-\/>anterior\_ = nodo;}
+\DoxyCodeLine{577         \}}
+\DoxyCodeLine{578     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a7c40d476795af5b614b9ca02198e7792}\label{classLista_a7c40d476795af5b614b9ca02198e7792}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!inserta@{inserta}}
+\index{inserta@{inserta}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inserta()}{inserta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::inserta (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{T}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Inserta un elemento en un índice explícito. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em i} & el índice en dónde se va a insertar el elemento. \\
+\hline
+{\em elemento} & el elemento a insertar. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & si {\ttfamily elemento} es nulo. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classLista_a95981afce9cc430cfb1b69803e6efd4d}\label{classLista_a95981afce9cc430cfb1b69803e6efd4d}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!limpia@{limpia}}
+\index{limpia@{limpia}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{limpia()}{limpia()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::limpia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Limpia la colección. 
+
+Después de la ejecución, la colección está vacía. 
+
+Implementa \mbox{\hyperlink{classColeccion_aa403eb962eb5797ce2896a5a81bbfa5d}{Coleccion$<$ T $>$}}.
+
+
+
+Definición en la línea 424 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{424                   \{}
+\DoxyCodeLine{425         Nodo<T>* auxiliar = this-\/>cabeza\_;}
+\DoxyCodeLine{426         \textcolor{keywordflow}{while} (auxiliar != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{427             Nodo<T>* siguiente = auxiliar-\/>siguiente\_;}
+\DoxyCodeLine{428             \textcolor{keyword}{delete} auxiliar;}
+\DoxyCodeLine{429             auxiliar = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{430             auxiliar = siguiente;}
+\DoxyCodeLine{431         \}}
+\DoxyCodeLine{432         auxiliar = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{433         this-\/>cabeza\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{434         this-\/>rabo\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{435         this-\/>longitud\_ = 0;}
+\DoxyCodeLine{436     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}\label{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!reversa@{reversa}}
+\index{reversa@{reversa}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reversa()}{reversa()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$T$>$$\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::reversa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Regresamos un puntero a una reversa de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+un puntero a la reversa de la lista. 
+\end{DoxyReturn}
+
+
+Definición en la línea 692 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{692                         \{}
+\DoxyCodeLine{693         Nodo<T>* nodo = this-\/>rabo\_;}
+\DoxyCodeLine{694         \mbox{\hyperlink{classLista}{Lista<T>}}* \mbox{\hyperlink{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}{reversa}} = \textcolor{keyword}{new} \mbox{\hyperlink{classLista}{Lista<T>}}();}
+\DoxyCodeLine{695         \textcolor{keywordflow}{while} (nodo != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{696             \mbox{\hyperlink{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}{reversa}}-\/>agregaFinal(nodo-\/>elemento\_);}
+\DoxyCodeLine{697             nodo = nodo-\/>anterior\_;}
+\DoxyCodeLine{698         \}}
+\DoxyCodeLine{699         \textcolor{keywordflow}{return} \mbox{\hyperlink{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}{reversa}};}
+\DoxyCodeLine{700     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}\label{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!reversa@{reversa}}
+\index{reversa@{reversa}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reversa()}{reversa()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$T$>$$\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::reversa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Regresamos un puntero a una reversa de la lista. 
+
+\begin{DoxyReturn}{Devuelve}
+un puntero a la reversa de la lista. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLista_ae5adc54ec0f6cef36e86ad61b493e5ab}\label{classLista_ae5adc54ec0f6cef36e86ad61b493e5ab}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!toString@{toString}}
+\index{toString@{toString}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Representación en cadena de las listas. 
+
+
+
+Definición en la línea 442 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{442                                \{}
+\DoxyCodeLine{443         std::stringstream s;}
+\DoxyCodeLine{444         \textcolor{keywordflow}{if} (this-\/>longitud\_ == 0) \{}
+\DoxyCodeLine{445             s << \textcolor{stringliteral}{"{}[]"{}};}
+\DoxyCodeLine{446             \textcolor{keywordflow}{return} s.str();}
+\DoxyCodeLine{447         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{448             s << \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{449             Nodo<T>* nodo = this-\/>cabeza\_;}
+\DoxyCodeLine{450             \textcolor{keywordflow}{while} (nodo != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{451                 s << nodo-\/>elemento\_;}
+\DoxyCodeLine{452                 \textcolor{keywordflow}{if} (nodo-\/>siguiente\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{453                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{454                 \}}
+\DoxyCodeLine{455                 s << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{456                 nodo = nodo-\/>siguiente\_;}
+\DoxyCodeLine{457             \}}
+\DoxyCodeLine{458             s << \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{459             \textcolor{keywordflow}{return} s.str();}
+\DoxyCodeLine{460         \}}
+\DoxyCodeLine{461     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{classLista_a59acc9f2302e1b6b448beca58888abba}\label{classLista_a59acc9f2302e1b6b448beca58888abba}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&}]{lista,  }\item[{const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobreescribimos el operador ==. 
+
+
+
+Definición en la línea 496 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{496                                                                       \{}
+\DoxyCodeLine{497         \textcolor{keywordflow}{return} !(lista == l);}
+\DoxyCodeLine{498     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a90bb9992fc9e33eb3a0c7c7fca5ade93}\label{classLista_a90bb9992fc9e33eb3a0c7c7fca5ade93}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{strm,  }\item[{const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&}]{lista }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobreescribimos el operador $<$$<$. 
+
+
+
+Definición en la línea 467 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{467                                                                             \{}
+\DoxyCodeLine{468         \textcolor{keywordflow}{return} strm << lista.\mbox{\hyperlink{classLista_ae5adc54ec0f6cef36e86ad61b493e5ab}{toString}}();}
+\DoxyCodeLine{469     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_a61e3b12b33b2c4008f7373c83f13a3df}\label{classLista_a61e3b12b33b2c4008f7373c83f13a3df}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&}]{lista,  }\item[{const \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$ \&}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobreescribimos el operador ==. 
+
+
+
+Definición en la línea 475 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{475                                                                       \{}
+\DoxyCodeLine{476         \textcolor{keywordflow}{if} (lista.longitud\_ != l.longitud\_) \{}
+\DoxyCodeLine{477             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{478         \}}
+\DoxyCodeLine{479         Nodo<T>* nodo = lista.cabeza\_;}
+\DoxyCodeLine{480         Nodo<T>* n = l.cabeza\_;}
+\DoxyCodeLine{481         \textcolor{keywordflow}{while} (nodo != \textcolor{keyword}{nullptr} \&\& n != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{482             \textcolor{keywordflow}{if} (*(nodo) != *(n)) \{}
+\DoxyCodeLine{483                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{484             \}}
+\DoxyCodeLine{485             nodo = nodo-\/>getSiguiente();}
+\DoxyCodeLine{486             n = n-\/>getSiguiente();}
+\DoxyCodeLine{487         \}}
+\DoxyCodeLine{488         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{489         }
+\DoxyCodeLine{490     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/lista/src/main/c++/mx/edd/\mbox{\hyperlink{Lista_8cpp}{Lista.\+cpp}}\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/lista/src/main/c++/mx/edd/\mbox{\hyperlink{Lista_8hpp}{Lista.\+hpp}}\end{DoxyCompactItemize}

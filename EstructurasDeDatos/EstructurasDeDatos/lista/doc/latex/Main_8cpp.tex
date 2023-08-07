@@ -1,0 +1,200 @@
+\hypertarget{Main_8cpp}{}\doxysection{Referencia del Archivo /home/faustojh41014/\+Estructuras\+De\+Datos/lista/src/main/c++/mx/edd/\+Main.cpp}
+\label{Main_8cpp}\index{/home/faustojh41014/EstructurasDeDatos/lista/src/main/c++/mx/edd/Main.cpp@{/home/faustojh41014/EstructurasDeDatos/lista/src/main/c++/mx/edd/Main.cpp}}
+
+
+main.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include \char`\"{}Lista.\+cpp\char`\"{}}\newline
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Main_8cpp_ad41fa3da6e99bb8b63621432d3a989f5}{llena\+Lista}} (\mbox{\hyperlink{classLista}{Lista}}$<$ int $>$ $\ast$lista, int \&n)
+\begin{DoxyCompactList}\small\item\em Llenamos una lista con elementos aleatorios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Main_8cpp_a0ca28e523945bb6d215db1f95305535a}{elimina\+Elementos}} (\mbox{\hyperlink{classLista}{Lista}}$<$ int $>$ $\ast$lista)
+\begin{DoxyCompactList}\small\item\em Eliminamos los elementos de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Main_8cpp_a9410600a3007d20486a96f518a9b90e7}{inserta\+En\+Posicion\+Aleatoria}} (\mbox{\hyperlink{classLista}{Lista}}$<$ int $>$ $\ast$lista, int \&n)
+\begin{DoxyCompactList}\small\item\em Insertamos elementos en índices aleatorios en la lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+main. 
+
+\begin{DoxyVersion}{Versión}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{Main_8cpp_a0ca28e523945bb6d215db1f95305535a}\label{Main_8cpp_a0ca28e523945bb6d215db1f95305535a}} 
+\index{Main.cpp@{Main.cpp}!eliminaElementos@{eliminaElementos}}
+\index{eliminaElementos@{eliminaElementos}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{eliminaElementos()}{eliminaElementos()}}
+{\footnotesize\ttfamily void elimina\+Elementos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLista}{Lista}}$<$ int $>$ $\ast$}]{lista }\end{DoxyParamCaption})}
+
+
+
+Eliminamos los elementos de la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lista} & la lista de la cual eliminaremos elementos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 37 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                          \{}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} l = lista-\/>\mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{getLongitud}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} c = 0;}
+\DoxyCodeLine{40     \textcolor{keywordflow}{while} (c < l) \{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{if} (c < (l / 2)) \{}
+\DoxyCodeLine{42             lista-\/>\mbox{\hyperlink{classLista_addc6cbbd469cc6bc89b039da7b595210}{eliminaUltimo}}();}
+\DoxyCodeLine{43         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{44             lista-\/>\mbox{\hyperlink{classLista_a05d0714c8087cc0937dc63537aa57c29}{eliminaPrimero}}();}
+\DoxyCodeLine{45         \}}
+\DoxyCodeLine{46         c += 1;}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Main_8cpp_a9410600a3007d20486a96f518a9b90e7}\label{Main_8cpp_a9410600a3007d20486a96f518a9b90e7}} 
+\index{Main.cpp@{Main.cpp}!insertaEnPosicionAleatoria@{insertaEnPosicionAleatoria}}
+\index{insertaEnPosicionAleatoria@{insertaEnPosicionAleatoria}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{insertaEnPosicionAleatoria()}{insertaEnPosicionAleatoria()}}
+{\footnotesize\ttfamily void inserta\+En\+Posicion\+Aleatoria (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLista}{Lista}}$<$ int $>$ $\ast$}]{lista,  }\item[{int \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Insertamos elementos en índices aleatorios en la lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lista} & la lista en la cuál insertaremos los elementos. \\
+\hline
+{\em n} & el rango de los índices en los cuales insertaremos los elementos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 56 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                                                            \{}
+\DoxyCodeLine{57     \textcolor{keywordtype}{int} l = lista-\/>\mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{getLongitud}}();}
+\DoxyCodeLine{58     srand((\textcolor{keywordtype}{unsigned}) time(NULL));}
+\DoxyCodeLine{59     \textcolor{keywordtype}{int} c = 0;}
+\DoxyCodeLine{60     \textcolor{keywordflow}{while} (c < 5) \{}
+\DoxyCodeLine{61         \textcolor{keywordtype}{int} r = (rand() \% n);}
+\DoxyCodeLine{62         cout << \textcolor{stringliteral}{"{}Elemento siguiente: "{}} << lista-\/>\mbox{\hyperlink{classLista_af4b8fce4b46de279b34a0c0bd9b2bcd0}{get}}(r) << endl;}
+\DoxyCodeLine{63         cout << \textcolor{stringliteral}{"{}Posición: "{}} << r << endl;}
+\DoxyCodeLine{64         cout << \textcolor{stringliteral}{"{}Elemento: "{}} << c + 1 << endl;}
+\DoxyCodeLine{65         lista-\/>\mbox{\hyperlink{classLista_a7c40d476795af5b614b9ca02198e7792}{inserta}}(r, c + 1);}
+\DoxyCodeLine{66         cout << *(lista) << endl;}
+\DoxyCodeLine{67         c += 1;}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Main_8cpp_ad41fa3da6e99bb8b63621432d3a989f5}\label{Main_8cpp_ad41fa3da6e99bb8b63621432d3a989f5}} 
+\index{Main.cpp@{Main.cpp}!llenaLista@{llenaLista}}
+\index{llenaLista@{llenaLista}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{llenaLista()}{llenaLista()}}
+{\footnotesize\ttfamily void llena\+Lista (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLista}{Lista}}$<$ int $>$ $\ast$}]{lista,  }\item[{int \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Llenamos una lista con elementos aleatorios. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lista} & la lista a llenar con elementos aleatorios. \\
+\hline
+{\em n} & el número de elementos que agregaremos a lista. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 21 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                            \{}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} c = 0;}
+\DoxyCodeLine{23     srand((\textcolor{keywordtype}{unsigned}) time(NULL));   }
+\DoxyCodeLine{24     \textcolor{keywordflow}{while} (c < n) \{}
+\DoxyCodeLine{25         \textcolor{keywordtype}{int} r = (rand() \% n) + 1;}
+\DoxyCodeLine{26         lista-\/>\mbox{\hyperlink{classLista_ac032095f5cacf7efc7e34c8ec0fd7da6}{agregaFinal}}(r);}
+\DoxyCodeLine{27         c += 1;}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{Main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{Main.cpp@{Main.cpp}!main@{main}}
+\index{main@{main}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main. 
+
+
+
+Definición en la línea 75 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75                                  \{}
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} n = 50;}
+\DoxyCodeLine{77     \mbox{\hyperlink{classLista}{Lista<int>}}* lista = \textcolor{keyword}{new} \mbox{\hyperlink{classLista}{Lista<int>}}();}
+\DoxyCodeLine{78     \mbox{\hyperlink{Main_8cpp_ad41fa3da6e99bb8b63621432d3a989f5}{llenaLista}}(lista, n);}
+\DoxyCodeLine{79     cout << *(lista) << endl;}
+\DoxyCodeLine{80     \mbox{\hyperlink{Main_8cpp_a9410600a3007d20486a96f518a9b90e7}{insertaEnPosicionAleatoria}}(lista, n);       }
+\DoxyCodeLine{81     \mbox{\hyperlink{classLista}{Lista<int>}}* copia = lista-\/>\mbox{\hyperlink{classLista_a3a24c5d326773088e5fbd56e8b249207}{copia}}();}
+\DoxyCodeLine{82     cout << *(copia) << endl;}
+\DoxyCodeLine{83     \mbox{\hyperlink{classLista}{Lista<int>}}* reversa = lista-\/>\mbox{\hyperlink{classLista_a86fd8392e2c7b49b89fed7f8e0a202a5}{reversa}}();}
+\DoxyCodeLine{84     cout << *(reversa) << endl;}
+\DoxyCodeLine{85     cout << lista-\/>\mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{getLongitud}}() << endl;}
+\DoxyCodeLine{86     cout << copia-\/>\mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{getLongitud}}() << endl;}
+\DoxyCodeLine{87     cout << reversa-\/>getLongitud() << endl;}
+\DoxyCodeLine{88     \textcolor{keywordflow}{if} (*(lista) == *(copia)) \{}
+\DoxyCodeLine{89         cout << \textcolor{stringliteral}{"{}Las listas son iguales."{}} << endl;}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91     cout << lista-\/>\mbox{\hyperlink{classLista_a05d0714c8087cc0937dc63537aa57c29}{eliminaPrimero}}() << endl;}
+\DoxyCodeLine{92     cout << lista-\/>\mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{getLongitud}}() << endl;}
+\DoxyCodeLine{93     cout << *(lista) << endl;}
+\DoxyCodeLine{94     cout << lista-\/>\mbox{\hyperlink{classLista_addc6cbbd469cc6bc89b039da7b595210}{eliminaUltimo}}() << endl;}
+\DoxyCodeLine{95     cout << *(lista) << endl;}
+\DoxyCodeLine{96     cout << lista-\/>\mbox{\hyperlink{classLista_a0e460a5eea8b3f8ed7a0d1c5fdf461bd}{getLongitud}}() << endl;}
+\DoxyCodeLine{97     \mbox{\hyperlink{Main_8cpp_a0ca28e523945bb6d215db1f95305535a}{eliminaElementos}}(lista);}
+\DoxyCodeLine{98     \mbox{\hyperlink{Main_8cpp_a0ca28e523945bb6d215db1f95305535a}{eliminaElementos}}(copia);}
+\DoxyCodeLine{99     \mbox{\hyperlink{Main_8cpp_a0ca28e523945bb6d215db1f95305535a}{eliminaElementos}}(reversa);}
+\DoxyCodeLine{100     lista-\/>\mbox{\hyperlink{classLista_a95981afce9cc430cfb1b69803e6efd4d}{limpia}}();}
+\DoxyCodeLine{101     copia-\/>\mbox{\hyperlink{classLista_a95981afce9cc430cfb1b69803e6efd4d}{limpia}}();}
+\DoxyCodeLine{102     reversa-\/>limpia();}
+\DoxyCodeLine{103     cout << *(lista) << endl;}
+\DoxyCodeLine{104     cout << *(copia) << endl;}
+\DoxyCodeLine{105     cout << *(reversa) << endl;}
+\DoxyCodeLine{106     \textcolor{keywordflow}{if} (lista-\/>\mbox{\hyperlink{classLista_a60c926b4a656a0c6345a7b3f65db842c}{esVacia}}()) \{}
+\DoxyCodeLine{107         cout << \textcolor{stringliteral}{"{}La lista está vacía."{}} << endl;}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109     \textcolor{keyword}{delete} lista;}
+\DoxyCodeLine{110     \textcolor{keyword}{delete} copia;}
+\DoxyCodeLine{111     \textcolor{keyword}{delete} reversa;}
+\DoxyCodeLine{112     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{113 \}}
+
+\end{DoxyCode}
