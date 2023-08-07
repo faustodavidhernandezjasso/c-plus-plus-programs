@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpilas_y_colas_lib.a  CMakeFiles/pilas_y_colas_lib.dir/main/c++/mx/edd/Cola.cpp.o CMakeFiles/pilas_y_colas_lib.dir/main/c++/mx/edd/Main.cpp.o CMakeFiles/pilas_y_colas_lib.dir/main/c++/mx/edd/Pila.cpp.o
+/usr/bin/ranlib libpilas_y_colas_lib.a

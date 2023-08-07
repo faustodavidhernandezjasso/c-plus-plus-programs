@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/faustojh41014/EstructurasDeDatos/pilas_y_colas/src/main/c++/mx/edd/Cola.cpp
+iostream
+-
+string.h
+-
+sstream
+-
+stdlib.h
+-
+stdexcept
+-
+

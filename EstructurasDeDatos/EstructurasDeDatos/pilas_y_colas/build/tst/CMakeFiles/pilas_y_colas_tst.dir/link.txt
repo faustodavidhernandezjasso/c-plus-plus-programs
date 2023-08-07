@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/pilas_y_colas_tst.dir/test/c++/mx/test/Main.cpp.o  -o pilas_y_colas_tst  ../src/libpilas_y_colas_lib.a ../lib/libgtest.a -lpthread 

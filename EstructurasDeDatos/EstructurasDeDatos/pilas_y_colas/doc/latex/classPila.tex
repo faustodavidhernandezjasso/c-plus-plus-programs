@@ -1,0 +1,380 @@
+\hypertarget{classPila}{}\doxysection{Referencia de la plantilla de la Clase Pila$<$ T $>$}
+\label{classPila}\index{Pila$<$ T $>$@{Pila$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Pila.\+hpp$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classPila_a9b6acbff240fdc8cd252881b63986aac}{$\sim$\+Pila}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPila_a46aee5948374687a2ecf26dc79691036}{mete}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Metemos un elemento a la pila. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classPila_af855eb0d9cc03ed179cddd769d5c19f9}{saca}} ()
+\begin{DoxyCompactList}\small\item\em Sacamos un elemento de la pila. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classPila_ab38b2e6a1e0cdb970d5f5486614fa747}{mira}} ()
+\begin{DoxyCompactList}\small\item\em Miramos en un extremo de la pila. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPila_a8d946f60460f1a02ad0880acc1aa679e}{es\+Vacia}} ()
+\begin{DoxyCompactList}\small\item\em Nos indica sí la pila está vacía. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPila_a59147f51e337196dcb2a1216dbbb4406}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Representación en cadenas de pilas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPila_a46aee5948374687a2ecf26dc79691036}{mete}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Metemos un elemento a la pila. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classPila_af855eb0d9cc03ed179cddd769d5c19f9}{saca}} ()
+\begin{DoxyCompactList}\small\item\em Sacamos un elemento de la pila. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classPila_ab38b2e6a1e0cdb970d5f5486614fa747}{mira}} ()
+\begin{DoxyCompactList}\small\item\em Miramos en un extremo de la pila. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPila_a8d946f60460f1a02ad0880acc1aa679e}{es\+Vacia}} ()
+\begin{DoxyCompactList}\small\item\em Nos indica sí la pila está vacía. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classPila_a13180050c099f44d93083b87bb3d8cdf}{operator==}} (const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&pila, const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&p)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ==. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classPila_a9974397ea5b22c6952dcc86b414e871d}{operator$<$$<$}} (std\+::ostream \&strm, const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&pila)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ==. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Pila$<$ T $>$}
+
+
+Definición en la línea 15 del archivo Pila.\+hpp.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classPila_a9b6acbff240fdc8cd252881b63986aac}\label{classPila_a9b6acbff240fdc8cd252881b63986aac}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!````~Pila@{$\sim$Pila}}
+\index{````~Pila@{$\sim$Pila}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pila()}{~Pila()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classPila}{Pila}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definición en la línea 82 del archivo Pila.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                     \{}
+\DoxyCodeLine{83         Nodo<T>* auxiliar = this-\/>cabeza;}
+\DoxyCodeLine{84         \textcolor{keywordflow}{while} (auxiliar != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{85             Nodo<T>* n = auxiliar-\/>siguiente\_;}
+\DoxyCodeLine{86             \textcolor{keyword}{delete} auxiliar;}
+\DoxyCodeLine{87             auxiliar = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{88             auxiliar = n;}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90         this-\/>cabeza = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{91     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classPila_a8d946f60460f1a02ad0880acc1aa679e}\label{classPila_a8d946f60460f1a02ad0880acc1aa679e}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::es\+Vacia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nos indica sí la pila está vacía. 
+
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} sí la pila no tiene elementos. {\ttfamily false} en otro caso. 
+\end{DoxyReturn}
+
+
+Definición en la línea 146 del archivo Pila.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{146                    \{}
+\DoxyCodeLine{147         \textcolor{keywordflow}{return} this-\/>cabeza == \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{148     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPila_a8d946f60460f1a02ad0880acc1aa679e}\label{classPila_a8d946f60460f1a02ad0880acc1aa679e}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::es\+Vacia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nos indica sí la pila está vacía. 
+
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} sí la pila no tiene elementos. {\ttfamily false} en otro caso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPila_a46aee5948374687a2ecf26dc79691036}\label{classPila_a46aee5948374687a2ecf26dc79691036}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!mete@{mete}}
+\index{mete@{mete}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mete()}{mete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::mete (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metemos un elemento a la pila. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento a meter a la pila. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 98 del archivo Pila.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98                           \{}
+\DoxyCodeLine{99         Nodo<T>* nuevo = \textcolor{keyword}{new} Nodo<T>(elemento);}
+\DoxyCodeLine{100         \textcolor{keywordflow}{if} (this-\/>cabeza == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{101             this-\/>cabeza = this-\/>rabo = nuevo;}
+\DoxyCodeLine{102         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{103             nuevo-\/>siguiente\_ = this-\/>cabeza;}
+\DoxyCodeLine{104             this-\/>cabeza = nuevo;}
+\DoxyCodeLine{105         \}}
+\DoxyCodeLine{106     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPila_a46aee5948374687a2ecf26dc79691036}\label{classPila_a46aee5948374687a2ecf26dc79691036}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!mete@{mete}}
+\index{mete@{mete}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mete()}{mete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::mete (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Metemos un elemento a la pila. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento a meter a la pila. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPila_ab38b2e6a1e0cdb970d5f5486614fa747}\label{classPila_ab38b2e6a1e0cdb970d5f5486614fa747}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!mira@{mira}}
+\index{mira@{mira}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mira()}{mira()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::mira (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Miramos en un extremo de la pila. 
+
+\begin{DoxyReturn}{Devuelve}
+el elemento de un extremo de la pila. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & sí la pila está vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 133 del archivo Pila.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133              \{}
+\DoxyCodeLine{134         \textcolor{keywordflow}{if} (this-\/>cabeza == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{135             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}La pila está vacía"{}});}
+\DoxyCodeLine{136         \}}
+\DoxyCodeLine{137         \textcolor{keywordflow}{return} this-\/>cabeza-\/>elemento\_;}
+\DoxyCodeLine{138     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPila_ab38b2e6a1e0cdb970d5f5486614fa747}\label{classPila_ab38b2e6a1e0cdb970d5f5486614fa747}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!mira@{mira}}
+\index{mira@{mira}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mira()}{mira()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::mira (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Miramos en un extremo de la pila. 
+
+\begin{DoxyReturn}{Devuelve}
+el elemento de un extremo de la pila. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & sí la pila está vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classPila_af855eb0d9cc03ed179cddd769d5c19f9}\label{classPila_af855eb0d9cc03ed179cddd769d5c19f9}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!saca@{saca}}
+\index{saca@{saca}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{saca()}{saca()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::saca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sacamos un elemento de la pila. 
+
+\begin{DoxyReturn}{Devuelve}
+el elemento de un extremo de la pila. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & sí la pila está vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 114 del archivo Pila.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{114              \{}
+\DoxyCodeLine{115         \textcolor{keywordflow}{if} (this-\/>cabeza == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{116             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}La pila está vacía"{}});}
+\DoxyCodeLine{117         \}}
+\DoxyCodeLine{118         T elemento = this-\/>cabeza-\/>elemento\_;}
+\DoxyCodeLine{119         this-\/>cabeza = this-\/>cabeza-\/>siguiente\_;}
+\DoxyCodeLine{120         \textcolor{keywordflow}{if} (this-\/>cabeza == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{121             this-\/>rabo = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{122         \}}
+\DoxyCodeLine{123         \textcolor{keywordflow}{return} elemento;}
+\DoxyCodeLine{124         }
+\DoxyCodeLine{125     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPila_af855eb0d9cc03ed179cddd769d5c19f9}\label{classPila_af855eb0d9cc03ed179cddd769d5c19f9}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!saca@{saca}}
+\index{saca@{saca}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{saca()}{saca()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::saca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sacamos un elemento de la pila. 
+
+\begin{DoxyReturn}{Devuelve}
+el elemento de un extremo de la pila. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & sí la pila está vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classPila_a59147f51e337196dcb2a1216dbbb4406}\label{classPila_a59147f51e337196dcb2a1216dbbb4406}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!toString@{toString}}
+\index{toString@{toString}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Representación en cadenas de pilas. 
+
+
+
+Definición en la línea 175 del archivo Pila.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{175                                \{}
+\DoxyCodeLine{176         std::stringstream s;}
+\DoxyCodeLine{177         Nodo<T>* auxiliar = this-\/>cabeza;}
+\DoxyCodeLine{178         s << auxiliar-\/>elemento\_;}
+\DoxyCodeLine{179         s << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{180         auxiliar = auxiliar-\/>siguiente\_;}
+\DoxyCodeLine{181         \textcolor{keywordflow}{while} (auxiliar != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{182             s << auxiliar-\/>elemento\_;}
+\DoxyCodeLine{183             auxiliar = auxiliar-\/>siguiente\_;}
+\DoxyCodeLine{184             \textcolor{keywordflow}{if} (auxiliar == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{185                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{186             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{187                 s << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{188             \}}
+\DoxyCodeLine{189         \}}
+\DoxyCodeLine{190         \textcolor{keywordflow}{return} s.str();}
+\DoxyCodeLine{191     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{classPila_a9974397ea5b22c6952dcc86b414e871d}\label{classPila_a9974397ea5b22c6952dcc86b414e871d}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{strm,  }\item[{const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&}]{pila }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobreescribimos el operador ==. 
+
+
+
+Definición en la línea 197 del archivo Pila.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{197                                                                           \{}
+\DoxyCodeLine{198         \textcolor{keywordflow}{return} strm << pila.\mbox{\hyperlink{classPila_a59147f51e337196dcb2a1216dbbb4406}{toString}}();}
+\DoxyCodeLine{199     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPila_a13180050c099f44d93083b87bb3d8cdf}\label{classPila_a13180050c099f44d93083b87bb3d8cdf}} 
+\index{Pila$<$ T $>$@{Pila$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Pila$<$ T $>$@{Pila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&}]{pila,  }\item[{const \mbox{\hyperlink{classPila}{Pila}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobreescribimos el operador ==. 
+
+
+
+Definición en la línea 154 del archivo Pila.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{154                                                                    \{}
+\DoxyCodeLine{155         Nodo<T>* nodo = pila.cabeza;}
+\DoxyCodeLine{156         Nodo<T>* n = p.cabeza;}
+\DoxyCodeLine{157         \textcolor{keywordflow}{while} (nodo != \textcolor{keyword}{nullptr} \&\& n != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{158             \textcolor{keywordflow}{if} (nodo-\/>getElemento() != n-\/>getElemento()) \{}
+\DoxyCodeLine{159                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{160             \}}
+\DoxyCodeLine{161             nodo = nodo-\/>getSiguiente();}
+\DoxyCodeLine{162             n = n-\/>getSiguiente();}
+\DoxyCodeLine{163         \}}
+\DoxyCodeLine{164         \textcolor{keywordflow}{if} (nodo == \textcolor{keyword}{nullptr} \&\& n == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{165             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{166         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{167             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{168         \}}
+\DoxyCodeLine{169     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/pilas\+\_\+y\+\_\+colas/src/main/c++/mx/edd/\mbox{\hyperlink{Pila_8cpp}{Pila.\+cpp}}\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/pilas\+\_\+y\+\_\+colas/src/main/c++/mx/edd/\mbox{\hyperlink{Pila_8hpp}{Pila.\+hpp}}\end{DoxyCompactItemize}

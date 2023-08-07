@@ -1,0 +1,380 @@
+\hypertarget{classCola}{}\doxysection{Referencia de la plantilla de la Clase Cola$<$ T $>$}
+\label{classCola}\index{Cola$<$ T $>$@{Cola$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Cola.\+hpp$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classCola_a8b4a18c8687ef12dd3c49ef7f4f0f986}{$\sim$\+Cola}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCola_a408ac024b8efadfbd62788093c3673cd}{mete}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Metemos un elemento a la cola. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classCola_afceb1dae256fc33a6b315008d3b74fe9}{saca}} ()
+\begin{DoxyCompactList}\small\item\em Sacamos un elemento de la cola. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classCola_ab2062cda275401a50cb8d8f7b93ade98}{mira}} ()
+\begin{DoxyCompactList}\small\item\em Miramos en un extremo de la cola. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCola_ac88326fa1cd4d64bb9089820951060ba}{es\+Vacia}} ()
+\begin{DoxyCompactList}\small\item\em Nos indica sí la cola está vacía. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCola_acb317a1d2297e47cf44c0e053f4129a3}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Representación en cadenas de colas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCola_a408ac024b8efadfbd62788093c3673cd}{mete}} (T elemento)
+\begin{DoxyCompactList}\small\item\em Metemos un elemento a la pila. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classCola_afceb1dae256fc33a6b315008d3b74fe9}{saca}} ()
+\begin{DoxyCompactList}\small\item\em Sacamos un elemento de la pila. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classCola_ab2062cda275401a50cb8d8f7b93ade98}{mira}} ()
+\begin{DoxyCompactList}\small\item\em Miramos en un extremo de la pila. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCola_ac88326fa1cd4d64bb9089820951060ba}{es\+Vacia}} ()
+\begin{DoxyCompactList}\small\item\em Nos indica sí la pila está vacía. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classCola_a9a3c47f5e91ee7b86cb9e562b4f3ff3f}{operator==}} (const \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$ \&cola, const \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$ \&c)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ==. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classCola_af463d760a6891f27971220e839da14f5}{operator$<$$<$}} (std\+::ostream \&strm, const \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$ \&cola)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ==. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Cola$<$ T $>$}
+
+
+Definición en la línea 15 del archivo Cola.\+hpp.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classCola_a8b4a18c8687ef12dd3c49ef7f4f0f986}\label{classCola_a8b4a18c8687ef12dd3c49ef7f4f0f986}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!````~Cola@{$\sim$Cola}}
+\index{````~Cola@{$\sim$Cola}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Cola()}{~Cola()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classCola}{Cola}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definición en la línea 83 del archivo Cola.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                     \{}
+\DoxyCodeLine{84         Nodo<T>* auxiliar = this-\/>cabeza;}
+\DoxyCodeLine{85         \textcolor{keywordflow}{while} (auxiliar != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{86             Nodo<T>* n = auxiliar-\/>siguiente\_;}
+\DoxyCodeLine{87             \textcolor{keyword}{delete} auxiliar;}
+\DoxyCodeLine{88             auxiliar = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{89             auxiliar = n;}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91         this-\/>cabeza = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{92     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classCola_ac88326fa1cd4d64bb9089820951060ba}\label{classCola_ac88326fa1cd4d64bb9089820951060ba}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::es\+Vacia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Nos indica sí la cola está vacía. 
+
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} sí la cola no tiene elementos. {\ttfamily false} en otro caso. 
+\end{DoxyReturn}
+
+
+Definición en la línea 147 del archivo Cola.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{147                    \{}
+\DoxyCodeLine{148         \textcolor{keywordflow}{return} this-\/>cabeza == \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{149     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCola_ac88326fa1cd4d64bb9089820951060ba}\label{classCola_ac88326fa1cd4d64bb9089820951060ba}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!esVacia@{esVacia}}
+\index{esVacia@{esVacia}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{esVacia()}{esVacia()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::es\+Vacia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nos indica sí la pila está vacía. 
+
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily true} sí la pila no tiene elementos. {\ttfamily false} en otro caso. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCola_a408ac024b8efadfbd62788093c3673cd}\label{classCola_a408ac024b8efadfbd62788093c3673cd}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!mete@{mete}}
+\index{mete@{mete}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mete()}{mete()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::mete (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metemos un elemento a la cola. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento a meter a la cola. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 99 del archivo Cola.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                           \{}
+\DoxyCodeLine{100         Nodo<T>* nuevo = \textcolor{keyword}{new} Nodo<T>(elemento);}
+\DoxyCodeLine{101         \textcolor{keywordflow}{if} (this-\/>rabo == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{102             this-\/>cabeza = this-\/>rabo = nuevo;}
+\DoxyCodeLine{103         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{104             this-\/>rabo-\/>siguiente\_ = nuevo;}
+\DoxyCodeLine{105             this-\/>rabo = nuevo;}
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCola_a408ac024b8efadfbd62788093c3673cd}\label{classCola_a408ac024b8efadfbd62788093c3673cd}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!mete@{mete}}
+\index{mete@{mete}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mete()}{mete()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::mete (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Metemos un elemento a la pila. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em elemento} & el elemento a meter a la pila. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCola_ab2062cda275401a50cb8d8f7b93ade98}\label{classCola_ab2062cda275401a50cb8d8f7b93ade98}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!mira@{mira}}
+\index{mira@{mira}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mira()}{mira()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::mira (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Miramos en un extremo de la cola. 
+
+\begin{DoxyReturn}{Devuelve}
+el elemento de un extremo de la cola. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & sí la cola está vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 134 del archivo Cola.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134              \{}
+\DoxyCodeLine{135         \textcolor{keywordflow}{if} (this-\/>cabeza == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{136             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}La cola está vacía"{}});}
+\DoxyCodeLine{137         \}}
+\DoxyCodeLine{138         \textcolor{keywordflow}{return} this-\/>cabeza-\/>elemento\_;}
+\DoxyCodeLine{139     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCola_ab2062cda275401a50cb8d8f7b93ade98}\label{classCola_ab2062cda275401a50cb8d8f7b93ade98}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!mira@{mira}}
+\index{mira@{mira}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mira()}{mira()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::mira (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Miramos en un extremo de la pila. 
+
+\begin{DoxyReturn}{Devuelve}
+el elemento de un extremo de la pila. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & sí la pila está vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCola_afceb1dae256fc33a6b315008d3b74fe9}\label{classCola_afceb1dae256fc33a6b315008d3b74fe9}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!saca@{saca}}
+\index{saca@{saca}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{saca()}{saca()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::saca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sacamos un elemento de la cola. 
+
+\begin{DoxyReturn}{Devuelve}
+el elemento de un extremo de la cola. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & sí la cola está vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 115 del archivo Cola.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115              \{}
+\DoxyCodeLine{116         \textcolor{keywordflow}{if} (this-\/>cabeza == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{117             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}La cola está vacía"{}});}
+\DoxyCodeLine{118         \}}
+\DoxyCodeLine{119         T elemento = this-\/>cabeza-\/>elemento\_;}
+\DoxyCodeLine{120         this-\/>cabeza = this-\/>cabeza-\/>siguiente\_;}
+\DoxyCodeLine{121         \textcolor{keywordflow}{if} (this-\/>cabeza == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{122             this-\/>rabo = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{123         \}}
+\DoxyCodeLine{124         \textcolor{keywordflow}{return} elemento;}
+\DoxyCodeLine{125         }
+\DoxyCodeLine{126     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCola_afceb1dae256fc33a6b315008d3b74fe9}\label{classCola_afceb1dae256fc33a6b315008d3b74fe9}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!saca@{saca}}
+\index{saca@{saca}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{saca()}{saca()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::saca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sacamos un elemento de la pila. 
+
+\begin{DoxyReturn}{Devuelve}
+el elemento de un extremo de la pila. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em std\+::invalid\+\_\+argument} & sí la pila está vacía. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCola_acb317a1d2297e47cf44c0e053f4129a3}\label{classCola_acb317a1d2297e47cf44c0e053f4129a3}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!toString@{toString}}
+\index{toString@{toString}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::string \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Representación en cadenas de colas. 
+
+
+
+Definición en la línea 176 del archivo Cola.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{176                                \{}
+\DoxyCodeLine{177         std::stringstream s;}
+\DoxyCodeLine{178         Nodo<T>* auxiliar = this-\/>cabeza;}
+\DoxyCodeLine{179         s << auxiliar-\/>elemento\_;}
+\DoxyCodeLine{180         s << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{181         auxiliar = auxiliar-\/>siguiente\_;}
+\DoxyCodeLine{182         \textcolor{keywordflow}{while} (auxiliar != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{183             s << auxiliar-\/>elemento\_;}
+\DoxyCodeLine{184             auxiliar = auxiliar-\/>siguiente\_;}
+\DoxyCodeLine{185             \textcolor{keywordflow}{if} (auxiliar == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{186                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{187             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{188                 s << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{189             \}}
+\DoxyCodeLine{190         \}}
+\DoxyCodeLine{191         \textcolor{keywordflow}{return} s.str();}
+\DoxyCodeLine{192     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{classCola_af463d760a6891f27971220e839da14f5}\label{classCola_af463d760a6891f27971220e839da14f5}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{strm,  }\item[{const \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$ \&}]{cola }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobreescribimos el operador ==. 
+
+
+
+Definición en la línea 198 del archivo Cola.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{198                                                                           \{}
+\DoxyCodeLine{199         \textcolor{keywordflow}{return} strm << cola.\mbox{\hyperlink{classCola_acb317a1d2297e47cf44c0e053f4129a3}{toString}}();}
+\DoxyCodeLine{200     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCola_a9a3c47f5e91ee7b86cb9e562b4f3ff3f}\label{classCola_a9a3c47f5e91ee7b86cb9e562b4f3ff3f}} 
+\index{Cola$<$ T $>$@{Cola$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Cola$<$ T $>$@{Cola$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$ \&}]{cola,  }\item[{const \mbox{\hyperlink{classCola}{Cola}}$<$ T $>$ \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobreescribimos el operador ==. 
+
+
+
+Definición en la línea 155 del archivo Cola.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{155                                                                    \{}
+\DoxyCodeLine{156         Nodo<T>* nodo = cola.cabeza;}
+\DoxyCodeLine{157         Nodo<T>* n = c.cabeza;}
+\DoxyCodeLine{158         \textcolor{keywordflow}{while} (nodo != \textcolor{keyword}{nullptr} \&\& n != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{159             \textcolor{keywordflow}{if} (nodo-\/>getElemento() != n-\/>getElemento()) \{}
+\DoxyCodeLine{160                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{161             \}}
+\DoxyCodeLine{162             nodo = nodo-\/>getSiguiente();}
+\DoxyCodeLine{163             n = n-\/>getSiguiente();}
+\DoxyCodeLine{164         \}}
+\DoxyCodeLine{165         \textcolor{keywordflow}{if} (nodo == \textcolor{keyword}{nullptr} \&\& n == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{166             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{167         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{168             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{169         \}}
+\DoxyCodeLine{170     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/pilas\+\_\+y\+\_\+colas/src/main/c++/mx/edd/\mbox{\hyperlink{Cola_8cpp}{Cola.\+cpp}}\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/pilas\+\_\+y\+\_\+colas/src/main/c++/mx/edd/\mbox{\hyperlink{Cola_8hpp}{Cola.\+hpp}}\end{DoxyCompactItemize}

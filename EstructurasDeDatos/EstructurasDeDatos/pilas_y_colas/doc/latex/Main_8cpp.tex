@@ -1,0 +1,196 @@
+\hypertarget{Main_8cpp}{}\doxysection{Referencia del Archivo /home/faustojh41014/\+Estructuras\+De\+Datos/pilas\+\_\+y\+\_\+colas/src/main/c++/mx/edd/\+Main.cpp}
+\label{Main_8cpp}\index{/home/faustojh41014/EstructurasDeDatos/pilas\_y\_colas/src/main/c++/mx/edd/Main.cpp@{/home/faustojh41014/EstructurasDeDatos/pilas\_y\_colas/src/main/c++/mx/edd/Main.cpp}}
+
+
+main.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include \char`\"{}Pila.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Cola.\+cpp\char`\"{}}\newline
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Main_8cpp_abf9a17c542a812f3727d75406eac4acc}{saca\+Elementos\+De\+La\+Pila}} (\mbox{\hyperlink{classPila}{Pila}}$<$ int $>$ $\ast$pila)
+\begin{DoxyCompactList}\small\item\em Sacamos elementos de la pila. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Main_8cpp_a453300ef15f7d94a23d13109967ea6a1}{llena\+Pila}} (int \&n, \mbox{\hyperlink{classPila}{Pila}}$<$ int $>$ $\ast$pila)
+\begin{DoxyCompactList}\small\item\em Llenamos la pila de elementos aleatorios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Main_8cpp_ad86833bcd25c006c4ed65c8e84659baa}{saca\+Elementos\+De\+La\+Cola}} (\mbox{\hyperlink{classCola}{Cola}}$<$ int $>$ $\ast$cola)
+\begin{DoxyCompactList}\small\item\em Sacamos elementos de la cola. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Main_8cpp_a80eac3e1d5980b3bfab715ee56b691b4}{llena\+Cola}} (int \&n, \mbox{\hyperlink{classCola}{Cola}}$<$ int $>$ $\ast$cola)
+\begin{DoxyCompactList}\small\item\em Llenamos la cola de elementos aleatorios. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+main. 
+
+\begin{DoxyVersion}{Versión}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{Main_8cpp_a80eac3e1d5980b3bfab715ee56b691b4}\label{Main_8cpp_a80eac3e1d5980b3bfab715ee56b691b4}} 
+\index{Main.cpp@{Main.cpp}!llenaCola@{llenaCola}}
+\index{llenaCola@{llenaCola}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{llenaCola()}{llenaCola()}}
+{\footnotesize\ttfamily void llena\+Cola (\begin{DoxyParamCaption}\item[{int \&}]{n,  }\item[{\mbox{\hyperlink{classCola}{Cola}}$<$ int $>$ $\ast$}]{cola }\end{DoxyParamCaption})}
+
+
+
+Llenamos la cola de elementos aleatorios. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em n} & el número de elementos que trendrá la cola. \\
+\hline
+{\em cola} & la cola que llenaremos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 61 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                         \{}
+\DoxyCodeLine{62     \textcolor{keywordtype}{int} c = 0;}
+\DoxyCodeLine{63     srand((\textcolor{keywordtype}{unsigned}) time(NULL));}
+\DoxyCodeLine{64     \textcolor{keywordflow}{while} (c < n) \{}
+\DoxyCodeLine{65         \textcolor{keywordtype}{int} r = (rand() \% n) + 1;}
+\DoxyCodeLine{66         cout << \textcolor{stringliteral}{"{}Elemento que ingresa a la cola: "{}} << r << endl;}
+\DoxyCodeLine{67         cola-\/>\mbox{\hyperlink{classCola_a408ac024b8efadfbd62788093c3673cd}{mete}}(r);}
+\DoxyCodeLine{68         c += 1;}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Main_8cpp_a453300ef15f7d94a23d13109967ea6a1}\label{Main_8cpp_a453300ef15f7d94a23d13109967ea6a1}} 
+\index{Main.cpp@{Main.cpp}!llenaPila@{llenaPila}}
+\index{llenaPila@{llenaPila}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{llenaPila()}{llenaPila()}}
+{\footnotesize\ttfamily void llena\+Pila (\begin{DoxyParamCaption}\item[{int \&}]{n,  }\item[{\mbox{\hyperlink{classPila}{Pila}}$<$ int $>$ $\ast$}]{pila }\end{DoxyParamCaption})}
+
+
+
+Llenamos la pila de elementos aleatorios. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em n} & el número de elementos que tendrá la pila. \\
+\hline
+{\em pila} & la pila que llenaremos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 33 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                         \{}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} c = 0;}
+\DoxyCodeLine{35     srand((\textcolor{keywordtype}{unsigned}) time(NULL));}
+\DoxyCodeLine{36     \textcolor{keywordflow}{while} (c < n) \{}
+\DoxyCodeLine{37         \textcolor{keywordtype}{int} r = (rand() \% n) + 1;}
+\DoxyCodeLine{38         cout << \textcolor{stringliteral}{"{}Elemento que ingresa a la pila: "{}} << r << endl;}
+\DoxyCodeLine{39         pila-\/>\mbox{\hyperlink{classPila_a46aee5948374687a2ecf26dc79691036}{mete}}(r);}
+\DoxyCodeLine{40         c += 1;}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{Main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{Main.cpp@{Main.cpp}!main@{main}}
+\index{main@{main}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main. 
+
+
+
+Definición en la línea 76 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                                  \{}
+\DoxyCodeLine{77     \mbox{\hyperlink{classPila}{Pila<int>}}* pila = \textcolor{keyword}{new} \mbox{\hyperlink{classPila}{Pila<int>}}();}
+\DoxyCodeLine{78     \mbox{\hyperlink{classCola}{Cola<int>}}* cola = \textcolor{keyword}{new} \mbox{\hyperlink{classCola}{Cola<int>}}();}
+\DoxyCodeLine{79     \textcolor{keywordtype}{int} n = 10;}
+\DoxyCodeLine{80     \mbox{\hyperlink{Main_8cpp_a453300ef15f7d94a23d13109967ea6a1}{llenaPila}}(n, pila);}
+\DoxyCodeLine{81     cout << *(pila) << endl;}
+\DoxyCodeLine{82     \mbox{\hyperlink{Main_8cpp_abf9a17c542a812f3727d75406eac4acc}{sacaElementosDeLaPila}}(pila);}
+\DoxyCodeLine{83     \mbox{\hyperlink{Main_8cpp_a80eac3e1d5980b3bfab715ee56b691b4}{llenaCola}}(n, cola);}
+\DoxyCodeLine{84     cout << *(cola) << endl;}
+\DoxyCodeLine{85     \mbox{\hyperlink{Main_8cpp_ad86833bcd25c006c4ed65c8e84659baa}{sacaElementosDeLaCola}}(cola);}
+\DoxyCodeLine{86     \textcolor{keyword}{delete} pila;}
+\DoxyCodeLine{87     \textcolor{keyword}{delete} cola;}
+\DoxyCodeLine{88     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Main_8cpp_ad86833bcd25c006c4ed65c8e84659baa}\label{Main_8cpp_ad86833bcd25c006c4ed65c8e84659baa}} 
+\index{Main.cpp@{Main.cpp}!sacaElementosDeLaCola@{sacaElementosDeLaCola}}
+\index{sacaElementosDeLaCola@{sacaElementosDeLaCola}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{sacaElementosDeLaCola()}{sacaElementosDeLaCola()}}
+{\footnotesize\ttfamily void saca\+Elementos\+De\+La\+Cola (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCola}{Cola}}$<$ int $>$ $\ast$}]{cola }\end{DoxyParamCaption})}
+
+
+
+Sacamos elementos de la cola. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em cola} & la cola de la que sacaremos los elementos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 49 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                                             \{}
+\DoxyCodeLine{50     \textcolor{keywordflow}{while} (!(cola-\/>\mbox{\hyperlink{classCola_ac88326fa1cd4d64bb9089820951060ba}{esVacia}}())) \{}
+\DoxyCodeLine{51         cout << \textcolor{stringliteral}{"{}Elementos que se saca de la cola: "{}} << cola-\/>\mbox{\hyperlink{classCola_afceb1dae256fc33a6b315008d3b74fe9}{saca}}() << endl;}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Main_8cpp_abf9a17c542a812f3727d75406eac4acc}\label{Main_8cpp_abf9a17c542a812f3727d75406eac4acc}} 
+\index{Main.cpp@{Main.cpp}!sacaElementosDeLaPila@{sacaElementosDeLaPila}}
+\index{sacaElementosDeLaPila@{sacaElementosDeLaPila}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{sacaElementosDeLaPila()}{sacaElementosDeLaPila()}}
+{\footnotesize\ttfamily void saca\+Elementos\+De\+La\+Pila (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPila}{Pila}}$<$ int $>$ $\ast$}]{pila }\end{DoxyParamCaption})}
+
+
+
+Sacamos elementos de la pila. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em pila} & la pila de la que sacaremos los elementos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 21 del archivo Main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                             \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{while} (!(pila-\/>\mbox{\hyperlink{classPila_a8d946f60460f1a02ad0880acc1aa679e}{esVacia}}())) \{}
+\DoxyCodeLine{23         cout << \textcolor{stringliteral}{"{}Elemento que se saca de la pila: "{}} << pila-\/>\mbox{\hyperlink{classPila_af855eb0d9cc03ed179cddd769d5c19f9}{saca}}() << endl;}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
