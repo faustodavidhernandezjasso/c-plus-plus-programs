@@ -1,0 +1,331 @@
+\hypertarget{classLista_1_1const__iterator}{}\doxysection{Referencia de la Clase Lista$<$ T $>$\+::const\+\_\+iterator}
+\label{classLista_1_1const__iterator}\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+
+
+Clase para iteradores.  
+
+
+Diagrama de herencias de Lista$<$ T $>$\+::const\+\_\+iterator\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLista_1_1const__iterator}
+\end{center}
+\end{figure}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLista_1_1const__iterator_ade0d519a71bd5e4e70176150d5d43bb8}{const\+\_\+iterator}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{classLista_1_1const__iterator_a78337698383da17355511b444a645d4d}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador $\ast$. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \& \mbox{\hyperlink{classLista_1_1const__iterator_aaec39f74668242c34550a44409ab7dd0}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ++. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classLista_1_1const__iterator_a5c2ef5d0e6a8c17624120fe05acaaf92}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ++. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \& \mbox{\hyperlink{classLista_1_1const__iterator_a53bb2e4373e0add7f45b06f343c71ba0}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador --. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classLista_1_1const__iterator_a4a417ddb73f698a9ce83f3eb0aee2ca3}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador --. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLista_1_1const__iterator_a57046bf39a5fb89d23f6248b207884f5}{operator==}} (const \mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \&i) const
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador ==. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLista_1_1const__iterator_ab859a763502df616bc63b8875bcff3c4}{operator!=}} (const \mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \&i) const
+\begin{DoxyCompactList}\small\item\em Sobreescribimos el operador !=. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+T \& \mbox{\hyperlink{classLista_1_1const__iterator_a54083b3b8e56faccde1e346300682a9c}{retrieve}} () const
+\begin{DoxyCompactList}\small\item\em Regresamos una referencia del elemento del iterador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_1_1const__iterator_a869c20b0bb260284707a28eb22e77252}{const\+\_\+iterator}} (\mbox{\hyperlink{classLista_1_1Nodo}{Nodo}}$<$ T $>$ $\ast$\mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLista_1_1Nodo}{Nodo}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classLista_1_1Nodo}{Nodo}} actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLista_1_1const__iterator_aaf51eba006c8c436041f4a80ac819c75}{Lista$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Clase amiga. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Lista$<$ T $>$\+::const\+\_\+iterator}
+Clase para iteradores. 
+
+Definición en la línea 79 del archivo Lista.\+cpp.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classLista_1_1const__iterator_a869c20b0bb260284707a28eb22e77252}\label{classLista_1_1const__iterator_a869c20b0bb260284707a28eb22e77252}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{const\_iterator()}{const\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::const\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLista_1_1Nodo}{Nodo}}$<$ T $>$ $\ast$}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Constructor. 
+
+
+
+Definición en la línea 106 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                          \{}
+\DoxyCodeLine{107             this-\/>\mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}} = \mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}};}
+\DoxyCodeLine{108         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_1_1const__iterator_ade0d519a71bd5e4e70176150d5d43bb8}\label{classLista_1_1const__iterator_ade0d519a71bd5e4e70176150d5d43bb8}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{const\_iterator()}{const\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::const\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+
+Definición en la línea 117 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                          \{}
+\DoxyCodeLine{118             this-\/>\mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{119         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classLista_1_1const__iterator_ab859a763502df616bc63b8875bcff3c4}\label{classLista_1_1const__iterator_ab859a763502df616bc63b8875bcff3c4}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \&}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobreescribimos el operador !=. 
+
+
+
+Definición en la línea 179 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{179                                                        \{}
+\DoxyCodeLine{180             \textcolor{keywordflow}{return} (this-\/>\mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}} != i.current);}
+\DoxyCodeLine{181         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_1_1const__iterator_a78337698383da17355511b444a645d4d}\label{classLista_1_1const__iterator_a78337698383da17355511b444a645d4d}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobreescribimos el operador $\ast$. 
+
+
+
+Definición en la línea 125 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125                                    \{}
+\DoxyCodeLine{126             \mbox{\hyperlink{classLista_1_1const__iterator_a54083b3b8e56faccde1e346300682a9c}{retrieve}}();}
+\DoxyCodeLine{127         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_1_1const__iterator_aaec39f74668242c34550a44409ab7dd0}\label{classLista_1_1const__iterator_aaec39f74668242c34550a44409ab7dd0}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}}\& \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobreescribimos el operador ++. 
+
+
+
+Definición en la línea 133 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133                                      \{}
+\DoxyCodeLine{134             \mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}} = \mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}}-\/>siguiente\_;}
+\DoxyCodeLine{135             \textcolor{keywordflow}{return} *(\textcolor{keyword}{this});}
+\DoxyCodeLine{136         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_1_1const__iterator_a5c2ef5d0e6a8c17624120fe05acaaf92}\label{classLista_1_1const__iterator_a5c2ef5d0e6a8c17624120fe05acaaf92}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobreescribimos el operador ++. 
+
+
+
+Definición en la línea 142 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{142                                        \{}
+\DoxyCodeLine{143             \mbox{\hyperlink{classLista_1_1const__iterator_ade0d519a71bd5e4e70176150d5d43bb8}{const\_iterator}} it = *(\textcolor{keyword}{this});}
+\DoxyCodeLine{144             ++*(\textcolor{keyword}{this});}
+\DoxyCodeLine{145             \textcolor{keywordflow}{return} it;}
+\DoxyCodeLine{146         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_1_1const__iterator_a53bb2e4373e0add7f45b06f343c71ba0}\label{classLista_1_1const__iterator_a53bb2e4373e0add7f45b06f343c71ba0}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}}\& \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobreescribimos el operador --. 
+
+
+
+Definición en la línea 152 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152                                      \{}
+\DoxyCodeLine{153             \mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}} = \mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}}-\/>anterior\_;}
+\DoxyCodeLine{154             \textcolor{keywordflow}{return} *(\textcolor{keyword}{this});}
+\DoxyCodeLine{155         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_1_1const__iterator_a4a417ddb73f698a9ce83f3eb0aee2ca3}\label{classLista_1_1const__iterator_a4a417ddb73f698a9ce83f3eb0aee2ca3}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobreescribimos el operador --. 
+
+
+
+Definición en la línea 161 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{161                                        \{}
+\DoxyCodeLine{162             \mbox{\hyperlink{classLista_1_1const__iterator_ade0d519a71bd5e4e70176150d5d43bb8}{const\_iterator}} it = *(\textcolor{keyword}{this});}
+\DoxyCodeLine{163             -\/-\/*(\textcolor{keyword}{this});}
+\DoxyCodeLine{164             \textcolor{keywordflow}{return} it;}
+\DoxyCodeLine{165         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_1_1const__iterator_a57046bf39a5fb89d23f6248b207884f5}\label{classLista_1_1const__iterator_a57046bf39a5fb89d23f6248b207884f5}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLista_1_1const__iterator}{const\+\_\+iterator}} \&}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobreescribimos el operador ==. 
+
+
+
+Definición en la línea 171 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{171                                                        \{}
+\DoxyCodeLine{172             \textcolor{keywordflow}{return} (this-\/>\mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}} == i.current);}
+\DoxyCodeLine{173         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLista_1_1const__iterator_a54083b3b8e56faccde1e346300682a9c}\label{classLista_1_1const__iterator_a54083b3b8e56faccde1e346300682a9c}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{retrieve()}{retrieve()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::retrieve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Regresamos una referencia del elemento del iterador. 
+
+
+
+Definición en la línea 98 del archivo Lista.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{98                             \{}
+\DoxyCodeLine{99             \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}{current}}-\/>elemento\_;}
+\DoxyCodeLine{100         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{classLista_1_1const__iterator_aaf51eba006c8c436041f4a80ac819c75}\label{classLista_1_1const__iterator_aaf51eba006c8c436041f4a80ac819c75}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{Lista$<$ T $>$}{Lista< T >}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+friend class \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Clase amiga. 
+
+
+
+Definición en la línea 88 del archivo Lista.\+cpp.
+
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}\label{classLista_1_1const__iterator_ade5c7bef3a54e4261dcddcd1f8e54797}} 
+\index{Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}!current@{current}}
+\index{current@{current}!Lista$<$ T $>$::const\_iterator@{Lista$<$ T $>$::const\_iterator}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classLista_1_1Nodo}{Nodo}}$<$T$>$$\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::const\+\_\+iterator\+::current\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classLista_1_1Nodo}{Nodo}} actual. 
+
+
+
+Definición en la línea 88 del archivo Lista.\+cpp.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/arreglos/src/main/c++/mx/edd/\mbox{\hyperlink{Lista_8cpp}{Lista.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libarreglos_lib.a  CMakeFiles/arreglos_lib.dir/main/c++/mx/edd/Arreglos.cpp.o CMakeFiles/arreglos_lib.dir/main/c++/mx/edd/Lista.cpp.o CMakeFiles/arreglos_lib.dir/main/c++/mx/edd/Main.cpp.o
+/usr/bin/ranlib libarreglos_lib.a

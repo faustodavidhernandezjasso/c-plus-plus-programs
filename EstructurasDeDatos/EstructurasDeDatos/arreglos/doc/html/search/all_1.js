@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['begin_7',['begin',['../classLista.html#a6e3fd030d96b421dead3de5c0a0f1d6f',1,'Lista::begin()'],['../classLista.html#afece5da6b5519b6749d0304bfdae829a',1,'Lista::begin() const']]],
+  ['busquedabinaria_8',['busquedaBinaria',['../classArreglos.html#a516bfed813cf0023efd40d678abc2923',1,'Arreglos::busquedaBinaria(T *arreglo, T elemento, int n)'],['../classArreglos.html#ae2fb7ac2f48202b83e8a7bd81d18ad8b',1,'Arreglos::busquedaBinaria(T *arreglo, T elemento, int n, int(*compara)(const void *, const void *))'],['../classArreglos.html#a516bfed813cf0023efd40d678abc2923',1,'Arreglos::busquedaBinaria(T *arreglo, T elemento, int n)'],['../classArreglos.html#ae2fb7ac2f48202b83e8a7bd81d18ad8b',1,'Arreglos::busquedaBinaria(T *arreglo, T elemento, int n, int(*compara)(const void *, const void *))']]],
+  ['busquedalineal_9',['busquedaLineal',['../classLista.html#a61d2b218824873da1ab5eb8fd3c61aa4',1,'Lista::busquedaLineal(T elemento, int(*compara)(const void *, const void *))'],['../classLista.html#a6340c66e8b97882c4e01a862ec51633f',1,'Lista::busquedaLineal(Lista&lt; T &gt; *lista, T elemento)'],['../classLista.html#a61d2b218824873da1ab5eb8fd3c61aa4',1,'Lista::busquedaLineal(T elemento, int(*compara)(const void *, const void *))'],['../classLista.html#a6340c66e8b97882c4e01a862ec51633f',1,'Lista::busquedaLineal(Lista&lt; T &gt; *lista, T elemento)']]]
+];

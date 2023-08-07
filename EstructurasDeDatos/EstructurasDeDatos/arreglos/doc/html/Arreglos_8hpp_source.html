@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Arreglos, ordenamientos y búsquedas: Fichero Fuente /home/faustojh41014/EstructurasDeDatos/arreglos/src/main/c++/mx/edd/Arreglos.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arreglos, ordenamientos y búsquedas<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_bba303ed94b4ea50a3997503402a7bd2.html">c++</a></li><li class="navelem"><a class="el" href="dir_724e791938cbd456ef54ac3ac083f090.html">mx</a></li><li class="navelem"><a class="el" href="dir_54fcd9e9523b10ff52c541c9b47bdccd.html">edd</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Arreglos.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Arreglos_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef ARREGLOS_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define ARREGLOS_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span><a class="code" href="classArreglos.html">Arreglos</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classArreglos.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classArreglos.html">Arreglos</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classArreglos.html">Arreglos</a>() {};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classArreglos.html#af161e4dd338a9ac7ecaff2eb2e7ef33d">   36</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classArreglos.html#af161e4dd338a9ac7ecaff2eb2e7ef33d">compara</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* a, <span class="keyword">const</span> <span class="keywordtype">void</span>* b);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classArreglos.html#a7202f535960c7d065c864cf072dda172">   45</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classArreglos.html#a7202f535960c7d065c864cf072dda172">quickSort</a>(T* arreglo, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classArreglos.html#a5a3d719f8cce30d7077a17dbf0224641">   54</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classArreglos.html#a5a3d719f8cce30d7077a17dbf0224641">quickSort</a>(T* arreglo, <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                          <span class="keywordtype">int</span> (*<a class="code" href="classArreglos.html#a02c1f20b185d151c01cc7bc621c6f992">compara</a>)(<span class="keyword">const</span> <span class="keywordtype">void</span>*, <span class="keyword">const</span> <span class="keywordtype">void</span>*));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classArreglos.html#a990b88c202b9b2af6f90d76a11e7f8f4">   64</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classArreglos.html#a990b88c202b9b2af6f90d76a11e7f8f4">selectionSort</a>(T* arreglo, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classArreglos.html#a95b35d0b26c871263ea3d6117a945501">   73</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classArreglos.html#a95b35d0b26c871263ea3d6117a945501">selectionSort</a>(T* arreglo, <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                              <span class="keywordtype">int</span> (*<a class="code" href="classArreglos.html#a02c1f20b185d151c01cc7bc621c6f992">compara</a>)(<span class="keyword">const</span> <span class="keywordtype">void</span>*, <span class="keyword">const</span> <span class="keywordtype">void</span>*));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classArreglos.html#a516bfed813cf0023efd40d678abc2923">   84</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classArreglos.html#a516bfed813cf0023efd40d678abc2923">busquedaBinaria</a>(T* arreglo, T elemento, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classArreglos.html#ae2fb7ac2f48202b83e8a7bd81d18ad8b">   95</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classArreglos.html#ae2fb7ac2f48202b83e8a7bd81d18ad8b">busquedaBinaria</a>(T* arreglo, T elemento, <span class="keywordtype">int</span> n,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                               <span class="keywordtype">int</span> (*<a class="code" href="classArreglos.html#a02c1f20b185d151c01cc7bc621c6f992">compara</a>)(<span class="keyword">const</span> <span class="keywordtype">void</span>*, <span class="keyword">const</span> <span class="keywordtype">void</span>*));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ARREGLOS_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassArreglos_html"><div class="ttname"><a href="classArreglos.html">Arreglos</a></div><div class="ttdef"><b>Definition:</b> <a href="Arreglos_8hpp_source.html#l00015">Arreglos.hpp:15</a></div></div>
+<div class="ttc" id="aclassArreglos_html_a02c1f20b185d151c01cc7bc621c6f992"><div class="ttname"><a href="classArreglos.html#a02c1f20b185d151c01cc7bc621c6f992">Arreglos::compara</a></div><div class="ttdeci">static int compara(const void *a, const void *b)</div><div class="ttdoc">Función genérica para comparar elementos.</div><div class="ttdef"><b>Definition:</b> <a href="Arreglos_8cpp_source.html#l00035">Arreglos.cpp:35</a></div></div>
+<div class="ttc" id="aclassArreglos_html_a516bfed813cf0023efd40d678abc2923"><div class="ttname"><a href="classArreglos.html#a516bfed813cf0023efd40d678abc2923">Arreglos::busquedaBinaria</a></div><div class="ttdeci">static int busquedaBinaria(T *arreglo, T elemento, int n)</div><div class="ttdoc">Busca el elemento recibido en el arreglo ordenado recibido.</div></div>
+<div class="ttc" id="aclassArreglos_html_a5a3d719f8cce30d7077a17dbf0224641"><div class="ttname"><a href="classArreglos.html#a5a3d719f8cce30d7077a17dbf0224641">Arreglos::quickSort</a></div><div class="ttdeci">static void quickSort(T *arreglo, int n, int(*compara)(const void *, const void *))</div><div class="ttdoc">Ordena el arreglo recibido usando el algoritmo QuickSort.</div></div>
+<div class="ttc" id="aclassArreglos_html_a7202f535960c7d065c864cf072dda172"><div class="ttname"><a href="classArreglos.html#a7202f535960c7d065c864cf072dda172">Arreglos::quickSort</a></div><div class="ttdeci">static void quickSort(T *arreglo, int n)</div><div class="ttdoc">Ordena el arreglo recibido usando el algoritmo QuickSort.</div></div>
+<div class="ttc" id="aclassArreglos_html_a95b35d0b26c871263ea3d6117a945501"><div class="ttname"><a href="classArreglos.html#a95b35d0b26c871263ea3d6117a945501">Arreglos::selectionSort</a></div><div class="ttdeci">static void selectionSort(T *arreglo, int n, int(*compara)(const void *, const void *))</div><div class="ttdoc">Ordena el arreglo recibido usando el algoritmo SelectionSort.</div></div>
+<div class="ttc" id="aclassArreglos_html_a990b88c202b9b2af6f90d76a11e7f8f4"><div class="ttname"><a href="classArreglos.html#a990b88c202b9b2af6f90d76a11e7f8f4">Arreglos::selectionSort</a></div><div class="ttdeci">static void selectionSort(T *arreglo, int n)</div><div class="ttdoc">Ordena el arreglo recibido usando el algoritmo SelectionSort.</div></div>
+<div class="ttc" id="aclassArreglos_html_ae2fb7ac2f48202b83e8a7bd81d18ad8b"><div class="ttname"><a href="classArreglos.html#ae2fb7ac2f48202b83e8a7bd81d18ad8b">Arreglos::busquedaBinaria</a></div><div class="ttdeci">static int busquedaBinaria(T *arreglo, T elemento, int n, int(*compara)(const void *, const void *))</div><div class="ttdoc">Busca el elemento recibido en el arreglo ordenado recibido.</div></div>
+<div class="ttc" id="aclassArreglos_html_af161e4dd338a9ac7ecaff2eb2e7ef33d"><div class="ttname"><a href="classArreglos.html#af161e4dd338a9ac7ecaff2eb2e7ef33d">Arreglos::compara</a></div><div class="ttdeci">int compara(const void *a, const void *b)</div><div class="ttdoc">Función genérica para comparar elementos.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

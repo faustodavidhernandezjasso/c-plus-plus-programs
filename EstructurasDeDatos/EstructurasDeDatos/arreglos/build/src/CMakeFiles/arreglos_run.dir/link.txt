@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/arreglos_run.dir/main/c++/mx/edd/Arreglos.cpp.o CMakeFiles/arreglos_run.dir/main/c++/mx/edd/Lista.cpp.o CMakeFiles/arreglos_run.dir/main/c++/mx/edd/Main.cpp.o  -o arreglos_run 

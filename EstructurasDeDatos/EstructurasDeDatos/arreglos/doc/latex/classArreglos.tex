@@ -1,0 +1,432 @@
+\hypertarget{classArreglos}{}\doxysection{Referencia de la plantilla de la Clase Arreglos$<$ T $>$}
+\label{classArreglos}\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Arreglos.\+hpp$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classArreglos_af161e4dd338a9ac7ecaff2eb2e7ef33d}{compara}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Función genérica para comparar elementos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}} (const void $\ast$a, const void $\ast$b)
+\begin{DoxyCompactList}\small\item\em Función genérica para comparar elementos. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArreglos_a7202f535960c7d065c864cf072dda172}{quick\+Sort}} (T $\ast$arreglo, int n)
+\begin{DoxyCompactList}\small\item\em Ordena el arreglo recibido usando el algoritmo Quick\+Sort. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArreglos_a5a3d719f8cce30d7077a17dbf0224641}{quick\+Sort}} (T $\ast$arreglo, int n, int($\ast$\mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}})(const void $\ast$, const void $\ast$))
+\begin{DoxyCompactList}\small\item\em Ordena el arreglo recibido usando el algoritmo Quick\+Sort. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArreglos_a990b88c202b9b2af6f90d76a11e7f8f4}{selection\+Sort}} (T $\ast$arreglo, int n)
+\begin{DoxyCompactList}\small\item\em Ordena el arreglo recibido usando el algoritmo Selection\+Sort. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArreglos_a95b35d0b26c871263ea3d6117a945501}{selection\+Sort}} (T $\ast$arreglo, int n, int($\ast$\mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}})(const void $\ast$, const void $\ast$))
+\begin{DoxyCompactList}\small\item\em Ordena el arreglo recibido usando el algoritmo Selection\+Sort. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classArreglos_a516bfed813cf0023efd40d678abc2923}{busqueda\+Binaria}} (T $\ast$arreglo, T elemento, int n)
+\begin{DoxyCompactList}\small\item\em Busca el elemento recibido en el arreglo ordenado recibido. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classArreglos_ae2fb7ac2f48202b83e8a7bd81d18ad8b}{busqueda\+Binaria}} (T $\ast$arreglo, T elemento, int n, int($\ast$\mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}})(const void $\ast$, const void $\ast$))
+\begin{DoxyCompactList}\small\item\em Busca el elemento recibido en el arreglo ordenado recibido. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArreglos_a7202f535960c7d065c864cf072dda172}{quick\+Sort}} (T $\ast$arreglo, int n)
+\begin{DoxyCompactList}\small\item\em Ordena el arreglo recibido usando el algoritmo Quick\+Sort. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArreglos_a5a3d719f8cce30d7077a17dbf0224641}{quick\+Sort}} (T $\ast$arreglo, int n, int($\ast$\mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}})(const void $\ast$, const void $\ast$))
+\begin{DoxyCompactList}\small\item\em Ordena el arreglo recibido usando el algoritmo Quick\+Sort. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArreglos_a990b88c202b9b2af6f90d76a11e7f8f4}{selection\+Sort}} (T $\ast$arreglo, int n)
+\begin{DoxyCompactList}\small\item\em Ordena el arreglo recibido usando el algoritmo Selection\+Sort. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArreglos_a95b35d0b26c871263ea3d6117a945501}{selection\+Sort}} (T $\ast$arreglo, int n, int($\ast$\mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}})(const void $\ast$, const void $\ast$))
+\begin{DoxyCompactList}\small\item\em Ordena el arreglo recibido usando el algoritmo Selection\+Sort. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classArreglos_a516bfed813cf0023efd40d678abc2923}{busqueda\+Binaria}} (T $\ast$arreglo, T elemento, int n)
+\begin{DoxyCompactList}\small\item\em Busca el elemento recibido en el arreglo ordenado recibido. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classArreglos_ae2fb7ac2f48202b83e8a7bd81d18ad8b}{busqueda\+Binaria}} (T $\ast$arreglo, T elemento, int n, int($\ast$\mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}})(const void $\ast$, const void $\ast$))
+\begin{DoxyCompactList}\small\item\em Busca el elemento recibido en el arreglo ordenado recibido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T$>$\newline
+class Arreglos$<$ T $>$}
+
+
+Definición en la línea 15 del archivo Arreglos.\+hpp.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classArreglos_a516bfed813cf0023efd40d678abc2923}\label{classArreglos_a516bfed813cf0023efd40d678abc2923}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!busquedaBinaria@{busquedaBinaria}}
+\index{busquedaBinaria@{busquedaBinaria}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{busquedaBinaria()}{busquedaBinaria()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static int \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::busqueda\+Binaria (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{T}]{elemento,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Busca el elemento recibido en el arreglo ordenado recibido. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo ordenado a buscar. \\
+\hline
+{\em elemento} & el elemento a buscar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el índice del elemento en el arreglo. 
+\end{DoxyReturn}
+
+
+Definición en la línea 103 del archivo Arreglos.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103                                                               \{}
+\DoxyCodeLine{104         \textcolor{keywordflow}{return} \mbox{\hyperlink{classArreglos_a516bfed813cf0023efd40d678abc2923}{busquedaBinaria}}(arreglo, elemento, 0, n -\/ 1, \mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}});}
+\DoxyCodeLine{105     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArreglos_a516bfed813cf0023efd40d678abc2923}\label{classArreglos_a516bfed813cf0023efd40d678abc2923}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!busquedaBinaria@{busquedaBinaria}}
+\index{busquedaBinaria@{busquedaBinaria}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{busquedaBinaria()}{busquedaBinaria()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static int \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::busqueda\+Binaria (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{T}]{elemento,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Busca el elemento recibido en el arreglo ordenado recibido. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo ordenado a buscar. \\
+\hline
+{\em elemento} & el elemento a buscar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el índice del elemento en el arreglo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArreglos_ae2fb7ac2f48202b83e8a7bd81d18ad8b}\label{classArreglos_ae2fb7ac2f48202b83e8a7bd81d18ad8b}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!busquedaBinaria@{busquedaBinaria}}
+\index{busquedaBinaria@{busquedaBinaria}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{busquedaBinaria()}{busquedaBinaria()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static int \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::busqueda\+Binaria (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{T}]{elemento,  }\item[{int}]{n,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{compara }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Busca el elemento recibido en el arreglo ordenado recibido. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo ordenado a buscar. \\
+\hline
+{\em elemento} & el elemento a buscar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+{\em compara} & función genérica para comparar elementos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el índice del elemento en el arreglo. 
+\end{DoxyReturn}
+
+
+Definición en la línea 116 del archivo Arreglos.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                                                          \{}
+\DoxyCodeLine{118         \textcolor{keywordflow}{return} \mbox{\hyperlink{classArreglos_a516bfed813cf0023efd40d678abc2923}{busquedaBinaria}}(arreglo, elemento, 0, n -\/ 1, \mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}});}
+\DoxyCodeLine{119     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArreglos_ae2fb7ac2f48202b83e8a7bd81d18ad8b}\label{classArreglos_ae2fb7ac2f48202b83e8a7bd81d18ad8b}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!busquedaBinaria@{busquedaBinaria}}
+\index{busquedaBinaria@{busquedaBinaria}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{busquedaBinaria()}{busquedaBinaria()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static int \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::busqueda\+Binaria (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{T}]{elemento,  }\item[{int}]{n,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{compara }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Busca el elemento recibido en el arreglo ordenado recibido. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo ordenado a buscar. \\
+\hline
+{\em elemento} & el elemento a buscar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+{\em compara} & función genérica para comparar elementos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+el índice del elemento en el arreglo. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}\label{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!compara@{compara}}
+\index{compara@{compara}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{compara()}{compara()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static int \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::compara (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Función genérica para comparar elementos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a} & el primer elemento. \\
+\hline
+{\em b} & el segundo elemento. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 35 del archivo Arreglos.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                      \{}
+\DoxyCodeLine{36         \textcolor{keywordtype}{int} aa = *((\textcolor{keywordtype}{int}*) a);}
+\DoxyCodeLine{37         \textcolor{keywordtype}{int} bb = *((\textcolor{keywordtype}{int}*) b);}
+\DoxyCodeLine{38         \textcolor{keywordflow}{return} aa-\/bb;}
+\DoxyCodeLine{39     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArreglos_af161e4dd338a9ac7ecaff2eb2e7ef33d}\label{classArreglos_af161e4dd338a9ac7ecaff2eb2e7ef33d}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!compara@{compara}}
+\index{compara@{compara}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{compara()}{compara()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::compara (\begin{DoxyParamCaption}\item[{const void $\ast$}]{a,  }\item[{const void $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Función genérica para comparar elementos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em a} & el primer elemento. \\
+\hline
+{\em b} & el segundo elemento. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la diferencia de un elemento con otro. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArreglos_a7202f535960c7d065c864cf072dda172}\label{classArreglos_a7202f535960c7d065c864cf072dda172}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::quick\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Ordena el arreglo recibido usando el algoritmo Quick\+Sort. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo a ordenar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 48 del archivo Arreglos.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                              \{}
+\DoxyCodeLine{49         \mbox{\hyperlink{classArreglos_a7202f535960c7d065c864cf072dda172}{quickSort}}(arreglo, 0, n -\/ 1, \mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}});}
+\DoxyCodeLine{50     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArreglos_a7202f535960c7d065c864cf072dda172}\label{classArreglos_a7202f535960c7d065c864cf072dda172}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::quick\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ordena el arreglo recibido usando el algoritmo Quick\+Sort. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo a ordenar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArreglos_a5a3d719f8cce30d7077a17dbf0224641}\label{classArreglos_a5a3d719f8cce30d7077a17dbf0224641}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::quick\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{int}]{n,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{compara }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Ordena el arreglo recibido usando el algoritmo Quick\+Sort. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo a ordenar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+{\em compara} & función genérica para comparar elementos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 59 del archivo Arreglos.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                                                     \{}
+\DoxyCodeLine{61         \mbox{\hyperlink{classArreglos_a7202f535960c7d065c864cf072dda172}{quickSort}}(arreglo, 0, n -\/ 1, \mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}});}
+\DoxyCodeLine{62     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArreglos_a5a3d719f8cce30d7077a17dbf0224641}\label{classArreglos_a5a3d719f8cce30d7077a17dbf0224641}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::quick\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{int}]{n,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{compara }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ordena el arreglo recibido usando el algoritmo Quick\+Sort. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo a ordenar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+{\em compara} & función genérica para comparar elementos. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArreglos_a990b88c202b9b2af6f90d76a11e7f8f4}\label{classArreglos_a990b88c202b9b2af6f90d76a11e7f8f4}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!selectionSort@{selectionSort}}
+\index{selectionSort@{selectionSort}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectionSort()}{selectionSort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::selection\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Ordena el arreglo recibido usando el algoritmo Selection\+Sort. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo a ordenar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 71 del archivo Arreglos.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71                                                  \{}
+\DoxyCodeLine{72         \mbox{\hyperlink{classArreglos_a990b88c202b9b2af6f90d76a11e7f8f4}{selectionSort}}(arreglo, n, \mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}});}
+\DoxyCodeLine{73     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArreglos_a990b88c202b9b2af6f90d76a11e7f8f4}\label{classArreglos_a990b88c202b9b2af6f90d76a11e7f8f4}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!selectionSort@{selectionSort}}
+\index{selectionSort@{selectionSort}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectionSort()}{selectionSort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::selection\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ordena el arreglo recibido usando el algoritmo Selection\+Sort. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo a ordenar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArreglos_a95b35d0b26c871263ea3d6117a945501}\label{classArreglos_a95b35d0b26c871263ea3d6117a945501}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!selectionSort@{selectionSort}}
+\index{selectionSort@{selectionSort}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectionSort()}{selectionSort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::selection\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{int}]{n,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{compara }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Ordena el arreglo recibido usando el algoritmo Selection\+Sort. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo a ordenar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+{\em compara} & función genérica para comparar elementos. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 82 del archivo Arreglos.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                                                         \{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; i++) \{}
+\DoxyCodeLine{85             \textcolor{keywordtype}{int} m = i;}
+\DoxyCodeLine{86             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = i + 1; j < n; j++) \{}
+\DoxyCodeLine{87                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classArreglos_a02c1f20b185d151c01cc7bc621c6f992}{compara}}(arreglo + j, arreglo + m) < 0) \{}
+\DoxyCodeLine{88                     m = j;}
+\DoxyCodeLine{89                 \}}
+\DoxyCodeLine{90             \}}
+\DoxyCodeLine{91             intercambia(arreglo, i, m);}
+\DoxyCodeLine{92         \}}
+\DoxyCodeLine{93     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classArreglos_a95b35d0b26c871263ea3d6117a945501}\label{classArreglos_a95b35d0b26c871263ea3d6117a945501}} 
+\index{Arreglos$<$ T $>$@{Arreglos$<$ T $>$}!selectionSort@{selectionSort}}
+\index{selectionSort@{selectionSort}!Arreglos$<$ T $>$@{Arreglos$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectionSort()}{selectionSort()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classArreglos}{Arreglos}}$<$ T $>$\+::selection\+Sort (\begin{DoxyParamCaption}\item[{T $\ast$}]{arreglo,  }\item[{int}]{n,  }\item[{int($\ast$)(const void $\ast$, const void $\ast$)}]{compara }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ordena el arreglo recibido usando el algoritmo Selection\+Sort. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arreglo} & el arreglo a ordenar. \\
+\hline
+{\em n} & el número de elementos del arreglo. \\
+\hline
+{\em compara} & función genérica para comparar elementos. \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/arreglos/src/main/c++/mx/edd/\mbox{\hyperlink{Arreglos_8cpp}{Arreglos.\+cpp}}\item 
+/home/faustojh41014/\+Estructuras\+De\+Datos/arreglos/src/main/c++/mx/edd/\mbox{\hyperlink{Arreglos_8hpp}{Arreglos.\+hpp}}\end{DoxyCompactItemize}

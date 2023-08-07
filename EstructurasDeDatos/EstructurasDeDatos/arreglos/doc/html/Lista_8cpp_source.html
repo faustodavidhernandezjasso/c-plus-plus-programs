@@ -1,0 +1,772 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Arreglos, ordenamientos y búsquedas: Fichero Fuente /home/faustojh41014/EstructurasDeDatos/arreglos/src/main/c++/mx/edd/Lista.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arreglos, ordenamientos y búsquedas<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_bba303ed94b4ea50a3997503402a7bd2.html">c++</a></li><li class="navelem"><a class="el" href="dir_724e791938cbd456ef54ac3ac083f090.html">mx</a></li><li class="navelem"><a class="el" href="dir_54fcd9e9523b10ff52c541c9b47bdccd.html">edd</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Lista.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Lista_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Coleccion_8hpp.html">Coleccion.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef LISTA</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="Lista_8cpp.html#aed974a2defe14d23ccd278c081afb13a">   16</a></span>&#160;<span class="preprocessor">#define LISTA</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">class </span><a class="code" href="classLista.html">Lista</a> : <span class="keyword">public</span> <a class="code" href="classColeccion.html">Coleccion</a>&lt;T&gt; {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> K&gt;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classLista_1_1Nodo.html">   32</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classLista_1_1Nodo.html">Nodo</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">/* El elemento del nodo. */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        T elemento_;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">/* El nodo anterior. */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo</a>* anterior_;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">/* El nodo siguiente. */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classLista_1_1Nodo.html#aaf51eba006c8c436041f4a80ac819c75">   43</a></span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo</a>* siguiente_;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>&lt;T&gt;;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">/* Constructor */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classLista_1_1Nodo.html#ae7c3e7f7c5061211673528c96c190e01">   51</a></span>&#160;        <a class="code" href="classLista_1_1Nodo.html#ae7c3e7f7c5061211673528c96c190e01">Nodo</a>(T elemento) : elemento_(elemento), anterior_(nullptr), siguiente_(nullptr) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">/* Nos regresa el nodo siguiente */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classLista_1_1Nodo.html#a9468095934923903c5b12852badbd70d">   56</a></span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo</a>* <a class="code" href="classLista_1_1Nodo.html#a9468095934923903c5b12852badbd70d">getSiguiente</a>() {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> this-&gt;siguiente_;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">/* Sobreescribimos el operador == */</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classLista_1_1Nodo.html#a67ad7a5e02803aa289e13d94febc1eb5">   62</a></span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classLista_1_1Nodo.html#a67ad7a5e02803aa289e13d94febc1eb5">operator==</a>(<span class="keyword">const</span> <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>&amp; nodo, <span class="keyword">const</span> <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>&amp; n) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> (nodo.elemento_ == n.elemento_);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">/* Sobreescribimos el operador != */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classLista_1_1Nodo.html#a418d71d858d804e29bda6def76b99ea2">   68</a></span>&#160;        <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classLista_1_1Nodo.html#a418d71d858d804e29bda6def76b99ea2">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>&amp; nodo, <span class="keyword">const</span> <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>&amp; n) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> !(nodo == n);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html">   79</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">   88</a></span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* <a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>;   </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>&lt;T&gt;;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#a54083b3b8e56faccde1e346300682a9c">   98</a></span>&#160;        T&amp; <a class="code" href="classLista_1_1const__iterator.html#a54083b3b8e56faccde1e346300682a9c">retrieve</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span> this-&gt;current-&gt;elemento_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#a869c20b0bb260284707a28eb22e77252">  106</a></span>&#160;        <a class="code" href="classLista_1_1const__iterator.html#a869c20b0bb260284707a28eb22e77252">const_iterator</a>(<a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* <a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            this-&gt;current = <a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#ade0d519a71bd5e4e70176150d5d43bb8">  117</a></span>&#160;        <a class="code" href="classLista_1_1const__iterator.html#ade0d519a71bd5e4e70176150d5d43bb8">const_iterator</a>() {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            this-&gt;current = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#a78337698383da17355511b444a645d4d">  125</a></span>&#160;        <span class="keyword">const</span> T&amp; <a class="code" href="classLista_1_1const__iterator.html#a78337698383da17355511b444a645d4d">operator*</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <a class="code" href="classLista_1_1const__iterator.html#a54083b3b8e56faccde1e346300682a9c">retrieve</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#aaec39f74668242c34550a44409ab7dd0">  133</a></span>&#160;        <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a>&amp; <a class="code" href="classLista_1_1const__iterator.html#aaec39f74668242c34550a44409ab7dd0">operator++</a>() {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a> = <a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>-&gt;siguiente_;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">return</span> *(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#a5c2ef5d0e6a8c17624120fe05acaaf92">  142</a></span>&#160;        <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> <a class="code" href="classLista_1_1const__iterator.html#a5c2ef5d0e6a8c17624120fe05acaaf92">operator++</a>(<span class="keywordtype">int</span>) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> it = *(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            ++*(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#a53bb2e4373e0add7f45b06f343c71ba0">  152</a></span>&#160;        <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a>&amp; <a class="code" href="classLista_1_1const__iterator.html#a53bb2e4373e0add7f45b06f343c71ba0">operator--</a>() {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a> = <a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>-&gt;anterior_;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">return</span> *(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#a4a417ddb73f698a9ce83f3eb0aee2ca3">  161</a></span>&#160;        <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> <a class="code" href="classLista_1_1const__iterator.html#a4a417ddb73f698a9ce83f3eb0aee2ca3">operator--</a>(<span class="keywordtype">int</span>) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> it = *(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            --*(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#a57046bf39a5fb89d23f6248b207884f5">  171</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classLista_1_1const__iterator.html#a57046bf39a5fb89d23f6248b207884f5">operator==</a>(<span class="keyword">const</span> <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a>&amp; i)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">return</span> (this-&gt;current == i.<a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classLista_1_1const__iterator.html#ab859a763502df616bc63b8875bcff3c4">  179</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classLista_1_1const__iterator.html#ab859a763502df616bc63b8875bcff3c4">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a>&amp; i)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">return</span> (this-&gt;current != i.<a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    };</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html">  190</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classLista_1_1iterator.html">iterator</a> : <span class="keyword">public</span> <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html#ad1242fc5736cb9600a9394a0085134ae">  199</a></span>&#160;        <a class="code" href="classLista_1_1iterator.html#ad1242fc5736cb9600a9394a0085134ae">iterator</a>(<a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* p) : <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a>(p) {};</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>&lt;T&gt;;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html#af8fb00774ba97264757ccc3190865b7a">  212</a></span>&#160;        <a class="code" href="classLista_1_1iterator.html#af8fb00774ba97264757ccc3190865b7a">iterator</a>() : <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a>() {}</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html#a13c0f64792c5e891119b8b1ff6467c4a">  218</a></span>&#160;        T&amp; <a class="code" href="classLista_1_1iterator.html#a13c0f64792c5e891119b8b1ff6467c4a">operator*</a>() {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="keywordflow">return</span> this-&gt;<a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>-&gt;elemento_;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html#a3db5a8852dcf7362b8e426573bec82d7">  226</a></span>&#160;        <span class="keyword">const</span> T&amp; <a class="code" href="classLista_1_1iterator.html#a3db5a8852dcf7362b8e426573bec82d7">operator*</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">return</span> this-&gt;<a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>-&gt;elemento_;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html#adcc935c3094927d08b6681383d2a50e2">  234</a></span>&#160;        <a class="code" href="classLista_1_1iterator.html">iterator</a>&amp; <a class="code" href="classLista_1_1iterator.html#adcc935c3094927d08b6681383d2a50e2">operator++</a>() {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            this-&gt;<a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a> = this-&gt;<a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>-&gt;siguiente_;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <span class="keywordflow">return</span> *(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html#ab9acadb013834347decfb0dec501c67e">  243</a></span>&#160;        <a class="code" href="classLista_1_1iterator.html">iterator</a> <a class="code" href="classLista_1_1iterator.html#ab9acadb013834347decfb0dec501c67e">operator++</a>(<span class="keywordtype">int</span>) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <a class="code" href="classLista_1_1iterator.html">iterator</a> it = *(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            ++*(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html#a627b0d48b63e722ac6482202fa55ff56">  253</a></span>&#160;        <a class="code" href="classLista_1_1iterator.html">iterator</a>&amp; <a class="code" href="classLista_1_1iterator.html#a627b0d48b63e722ac6482202fa55ff56">operator--</a>() {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            this-&gt;<a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a> = this-&gt;<a class="code" href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">current</a>-&gt;siguiente_;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordflow">return</span> *(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="classLista_1_1iterator.html#afe3a372cf022c73557a2decb493d7e54">  262</a></span>&#160;        <a class="code" href="classLista_1_1iterator.html">iterator</a> <a class="code" href="classLista_1_1iterator.html#afe3a372cf022c73557a2decb493d7e54">operator--</a>(<span class="keywordtype">int</span>) {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <a class="code" href="classLista_1_1iterator.html">iterator</a> it = *(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            --*(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    };</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    Nodo&lt;T&gt;* cabeza_;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    Nodo&lt;T&gt;* rabo_;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">int</span> longitud_;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    Nodo&lt;T&gt;* buscaNodo(T elemento) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        Nodo&lt;T&gt;* auxiliar = cabeza_;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">while</span> (auxiliar != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">if</span> (auxiliar-&gt;elemento_ == elemento) {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <span class="keywordflow">return</span> auxiliar;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            auxiliar = auxiliar-&gt;siguiente_;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    Nodo&lt;T&gt;* iesimoNodo(<span class="keywordtype">int</span> i) {</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        Nodo&lt;T&gt;* nodo = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordtype">int</span> contador = 0;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">while</span> (contador != i) {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            contador += 1;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            nodo = nodo-&gt;siguiente_;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keywordflow">return</span> nodo;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="classLista.html#a37d07dd9b2e41f9779a280c8632f46bd">  328</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classLista.html#a37d07dd9b2e41f9779a280c8632f46bd">~Lista</a>() {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <a class="code" href="classLista.html#a95981afce9cc430cfb1b69803e6efd4d">limpia</a>();</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno"><a class="line" href="classLista.html#a6b110121436300dcafafd0dbde66b3a7">  339</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a6b110121436300dcafafd0dbde66b3a7">agrega</a>(T elemento) {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nuevo = <span class="keyword">new</span> <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>(elemento);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        this-&gt;longitud_ += 1;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">if</span> (rabo_ == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            cabeza_ = rabo_ = nuevo;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            rabo_-&gt;siguiente_ = nuevo;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;            nuevo-&gt;anterior_ = rabo_;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            rabo_ = nuevo;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno"><a class="line" href="classLista.html#a06f3a733528037a2057915ec03f307c4">  356</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a>(T elemento) {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* <a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a> = buscaNodo(elemento);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            this-&gt;longitud_ -= 1;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">if</span> ((cabeza_-&gt;elemento_ == <a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a>-&gt;elemento_) &amp;&amp; (rabo_-&gt;elemento_ == <a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a>-&gt;elemento_)) {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                cabeza_ = rabo_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cabeza_-&gt;elemento_ == <a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a>-&gt;elemento_) {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* siguiente = cabeza_-&gt;siguiente_;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                siguiente-&gt;anterior_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                cabeza_ = siguiente;</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rabo_-&gt;elemento_ == <a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a>-&gt;elemento_) {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* anterior = rabo_-&gt;anterior_;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                anterior-&gt;siguiente_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                rabo_ = anterior;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* anterior = <a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a>-&gt;anterior_;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* siguiente = <a class="code" href="classLista.html#a06f3a733528037a2057915ec03f307c4">elimina</a>-&gt;siguiente_;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                anterior-&gt;siguiente_ = siguiente;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                siguiente-&gt;anterior_ = anterior;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    }</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="classLista.html#a3257e3d3c45b1c3cb11d0ff19edcdfea">  389</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classLista.html#a3257e3d3c45b1c3cb11d0ff19edcdfea">contiene</a>(T elemento) {</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nodo = buscaNodo(elemento);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">if</span> (nodo == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        }</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno"><a class="line" href="classLista.html#a60c926b4a656a0c6345a7b3f65db842c">  405</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classLista.html#a60c926b4a656a0c6345a7b3f65db842c">esVacia</a>() {</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keywordflow">return</span> (cabeza_ == <span class="keyword">nullptr</span>) &amp;&amp; (rabo_ == <span class="keyword">nullptr</span>) &amp;&amp; (longitud_ == 0);</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    }</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00415"></a><span class="lineno"><a class="line" href="classLista.html#a6a58d9e1913ca5f1c02b64164712b620">  415</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLista.html#a6a58d9e1913ca5f1c02b64164712b620">getElementos</a>() {</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keywordflow">return</span> this-&gt;longitud_;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="classLista.html#a95981afce9cc430cfb1b69803e6efd4d">  424</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a95981afce9cc430cfb1b69803e6efd4d">limpia</a>() {</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* auxiliar = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keywordflow">while</span> (auxiliar != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;            <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* siguiente = auxiliar-&gt;siguiente_;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            <span class="keyword">delete</span> auxiliar;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            auxiliar = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            auxiliar = siguiente;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        }</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        auxiliar = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        this-&gt;cabeza_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        this-&gt;rabo_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        this-&gt;longitud_ = 0;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
+<div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="classLista.html#ae5adc54ec0f6cef36e86ad61b493e5ab">  442</a></span>&#160;    std::string <a class="code" href="classLista.html#ae5adc54ec0f6cef36e86ad61b493e5ab">toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        std::stringstream s;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;        <span class="keywordflow">if</span> (this-&gt;longitud_ == 0) {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;[]&quot;</span>;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;            <span class="keywordflow">return</span> s.str();</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;            <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nodo = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            <span class="keywordflow">while</span> (nodo != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                s &lt;&lt; nodo-&gt;elemento_;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                <span class="keywordflow">if</span> (nodo-&gt;siguiente_ == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                s &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                nodo = nodo-&gt;siguiente_;</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;            }</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;            s &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            <span class="keywordflow">return</span> s.str();</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        }</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    }</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00467"></a><span class="lineno"><a class="line" href="classLista.html#a90bb9992fc9e33eb3a0c7c7fca5ade93">  467</a></span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classLista.html#a90bb9992fc9e33eb3a0c7c7fca5ade93">operator &lt;&lt;</a>(std::ostream&amp; strm, <span class="keyword">const</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>&amp; lista) {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        <span class="keywordflow">return</span> strm &lt;&lt; lista.<a class="code" href="classLista.html#ae5adc54ec0f6cef36e86ad61b493e5ab">toString</a>();</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160; </div>
+<div class="line"><a name="l00475"></a><span class="lineno"><a class="line" href="classLista.html#a61e3b12b33b2c4008f7373c83f13a3df">  475</a></span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classLista.html#a61e3b12b33b2c4008f7373c83f13a3df">operator ==</a>(<span class="keyword">const</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>&amp; lista, <span class="keyword">const</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>&amp; l) {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordflow">if</span> (lista.longitud_ != l.longitud_) {</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nodo = lista.cabeza_;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* n = l.cabeza_;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        <span class="keywordflow">while</span> (nodo != <span class="keyword">nullptr</span> &amp;&amp; n != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;            <span class="keywordflow">if</span> (*(nodo) != *(n)) {</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            }</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;            nodo = nodo-&gt;<a class="code" href="classLista_1_1Nodo.html#a9468095934923903c5b12852badbd70d">getSiguiente</a>();</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            n = n-&gt;<a class="code" href="classLista_1_1Nodo.html#a9468095934923903c5b12852badbd70d">getSiguiente</a>();</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        }</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        </div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    }</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
+<div class="line"><a name="l00496"></a><span class="lineno"><a class="line" href="classLista.html#a59acc9f2302e1b6b448beca58888abba">  496</a></span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="classLista.html#a59acc9f2302e1b6b448beca58888abba">operator !=</a>(<span class="keyword">const</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>&amp; lista, <span class="keyword">const</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>&amp; l) {</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        <span class="keywordflow">return</span> !(lista == l);</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    }</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    </div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160; </div>
+<div class="line"><a name="l00506"></a><span class="lineno"><a class="line" href="classLista.html#a0e460a5eea8b3f8ed7a0d1c5fdf461bd">  506</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLista.html#a0e460a5eea8b3f8ed7a0d1c5fdf461bd">getLongitud</a>() {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <span class="keywordflow">return</span> this-&gt;longitud_;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    }</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160; </div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
+<div class="line"><a name="l00517"></a><span class="lineno"><a class="line" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">  517</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(T elemento) {</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keywordflow">if</span> (!elemento) {</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;No se puede agregar el elemento a lista&quot;</span>);</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        }</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nuevo = <span class="keyword">new</span> <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>(elemento);</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        this-&gt;longitud_ += 1;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        <span class="keywordflow">if</span> (this-&gt;rabo_ == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;            this-&gt;cabeza_ = this-&gt;rabo_ = nuevo;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;            this-&gt;rabo_-&gt;siguiente_ = nuevo;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;            nuevo-&gt;anterior_ = this-&gt;rabo_;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;            this-&gt;rabo_ = nuevo;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        }</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    }</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160; </div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160; </div>
+<div class="line"><a name="l00538"></a><span class="lineno"><a class="line" href="classLista.html#a6598a7cd7914bc597d8eeb3e0e0b6b0a">  538</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a6598a7cd7914bc597d8eeb3e0e0b6b0a">agregaInicio</a>(T elemento) {</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        <span class="keywordflow">if</span> (!elemento) {</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;No se puede agregar el elemento a lista&quot;</span>);</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        }</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nuevo = <span class="keyword">new</span> <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>(elemento);</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        this-&gt;longitud_ += 1;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="keywordflow">if</span> (this-&gt;cabeza_ == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            this-&gt;cabeza_ = this-&gt;rabo_ = nuevo;</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;            this-&gt;cabeza_-&gt;anterior_ = nuevo;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;            nuevo-&gt;siguiente_ = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;            this-&gt;cabeza_ = nuevo;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        }</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160; </div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160; </div>
+<div class="line"><a name="l00560"></a><span class="lineno"><a class="line" href="classLista.html#a7c40d476795af5b614b9ca02198e7792">  560</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a7c40d476795af5b614b9ca02198e7792">inserta</a>(<span class="keywordtype">int</span> i, T elemento) {</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        <span class="keywordflow">if</span> (!elemento) {</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;El elemento es nulo&quot;</span>);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        }</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        <span class="keywordflow">if</span> (i &lt; 1) {</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;            <a class="code" href="classLista.html#a6598a7cd7914bc597d8eeb3e0e0b6b0a">agregaInicio</a>(elemento);</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &gt; this-&gt;longitud_ - 1) {</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;            <a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(elemento);</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;            this-&gt;longitud_ += 1;</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;            <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nodo = <span class="keyword">new</span> <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>(elemento);</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;            <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* s = iesimoNodo(i);</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;            <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* a = s-&gt;anterior_;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;            nodo-&gt;anterior_ = a;</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;            a-&gt;siguiente_ = nodo;</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            nodo-&gt;siguiente_ = s;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;            s-&gt;anterior_ = nodo;</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        }</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    }</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160; </div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160; </div>
+<div class="line"><a name="l00586"></a><span class="lineno"><a class="line" href="classLista.html#a05d0714c8087cc0937dc63537aa57c29">  586</a></span>&#160;    T <a class="code" href="classLista.html#a05d0714c8087cc0937dc63537aa57c29">eliminaPrimero</a>() {</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        <span class="keywordflow">if</span> (this-&gt;cabeza_ == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Lista vacía&quot;</span>);</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        }</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        this-&gt;longitud_ -= 1;</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        T elemento = this-&gt;cabeza_-&gt;elemento_;</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="keywordflow">if</span> (this-&gt;longitud_ == 0) {</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;            this-&gt;cabeza_ = this-&gt;rabo_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;            <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* siguiente = this-&gt;cabeza_-&gt;siguiente_;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            siguiente-&gt;anterior_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;            this-&gt;cabeza_ = siguiente;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        }</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        <span class="keywordflow">return</span> elemento;</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    }</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160; </div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160; </div>
+<div class="line"><a name="l00608"></a><span class="lineno"><a class="line" href="classLista.html#addc6cbbd469cc6bc89b039da7b595210">  608</a></span>&#160;    T <a class="code" href="classLista.html#addc6cbbd469cc6bc89b039da7b595210">eliminaUltimo</a>() {</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        <span class="keywordflow">if</span> (this-&gt;rabo_ == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Lista vacía&quot;</span>);</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        }</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        this-&gt;longitud_ -= 1;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        T elemento = this-&gt;rabo_-&gt;elemento_;</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        <span class="keywordflow">if</span> (this-&gt;longitud_ == 0) {</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;            this-&gt;cabeza_ = this-&gt;rabo_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;            <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* anterior = this-&gt;rabo_-&gt;anterior_;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;            anterior-&gt;siguiente_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;            this-&gt;rabo_ = anterior;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;        }</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        <span class="keywordflow">return</span> elemento;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    }</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160; </div>
+<div class="line"><a name="l00630"></a><span class="lineno"><a class="line" href="classLista.html#ac57bbb2870c0e6988f1834e6538d94a2">  630</a></span>&#160;    T <a class="code" href="classLista.html#ac57bbb2870c0e6988f1834e6538d94a2">getPrimero</a>() {</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        <span class="keywordflow">if</span> (this-&gt;longitud_ == 0) {</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Lista vacía&quot;</span>);</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        }</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        <span class="keywordflow">return</span> this-&gt;cabeza_-&gt;elemento_;</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    }</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160; </div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160; </div>
+<div class="line"><a name="l00643"></a><span class="lineno"><a class="line" href="classLista.html#af01d85a076fe148343d81e70355ea1a5">  643</a></span>&#160;    T <a class="code" href="classLista.html#af01d85a076fe148343d81e70355ea1a5">getUltimo</a>() {</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        <span class="keywordflow">if</span> (this-&gt;longitud_ == 0) {</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;            <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Lista vacía&quot;</span>);</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        }</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        <span class="keywordflow">return</span> this-&gt;cabeza_-&gt;elemento_;</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    }</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160; </div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
+<div class="line"><a name="l00657"></a><span class="lineno"><a class="line" href="classLista.html#af4b8fce4b46de279b34a0c0bd9b2bcd0">  657</a></span>&#160;    T <a class="code" href="classLista.html#af4b8fce4b46de279b34a0c0bd9b2bcd0">get</a>(<span class="keywordtype">int</span> i) {</div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        <span class="keywordflow">if</span> (i &lt; 0 || i &gt;= this-&gt;longitud_) {</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;            <span class="keywordflow">throw</span> std::out_of_range(<span class="stringliteral">&quot;Índice inválido&quot;</span>);</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        }</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        <span class="keywordtype">int</span> contador = 0;</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* auxiliar = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        <span class="keywordflow">while</span> (auxiliar != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;            <span class="keywordflow">if</span> (contador == i) {</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;                <span class="keywordflow">return</span> auxiliar-&gt;elemento_;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;            }</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;            contador += 1;</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;            auxiliar = auxiliar-&gt;siguiente_;</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        }</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    }</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160; </div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160; </div>
+<div class="line"><a name="l00677"></a><span class="lineno"><a class="line" href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">  677</a></span>&#160;    <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* <a class="code" href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">copia</a>() {</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nodo = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* <a class="code" href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">copia</a> = <span class="keyword">new</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>();</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        <span class="keywordflow">while</span> (nodo != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            <a class="code" href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">copia</a>-&gt;agregaFinal(nodo-&gt;elemento_);</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;            nodo = nodo-&gt;siguiente_;</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        }</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">copia</a>;</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    }</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160; </div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160; </div>
+<div class="line"><a name="l00692"></a><span class="lineno"><a class="line" href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">  692</a></span>&#160;    <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* <a class="code" href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">reversa</a>() {</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nodo = this-&gt;rabo_;</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* <a class="code" href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">reversa</a> = <span class="keyword">new</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>();</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        <span class="keywordflow">while</span> (nodo != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;            <a class="code" href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">reversa</a>-&gt;agregaFinal(nodo-&gt;elemento_);</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            nodo = nodo-&gt;anterior_;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        }</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">reversa</a>;</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    }</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160; </div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
+<div class="line"><a name="l00709"></a><span class="lineno"><a class="line" href="classLista.html#ad4015dbc5ba14035dd44f1185ef87d25">  709</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLista.html#ad4015dbc5ba14035dd44f1185ef87d25">indiceDe</a>(T elemento) {</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;        <span class="keywordtype">int</span> contador = 0;</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* nodo = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        <span class="keywordflow">while</span> (nodo != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            <span class="keywordflow">if</span> (nodo-&gt;elemento_ == elemento) {</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                <span class="keywordflow">return</span> contador;</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            }</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;            contador += 1;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            nodo = nodo-&gt;siguiente_;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        }</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    }</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
+<div class="line"><a name="l00727"></a><span class="lineno"><a class="line" href="classLista.html#a6e3fd030d96b421dead3de5c0a0f1d6f">  727</a></span>&#160;    <a class="code" href="classLista_1_1iterator.html">iterator</a> <a class="code" href="classLista.html#a6e3fd030d96b421dead3de5c0a0f1d6f">begin</a>() {</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        <a class="code" href="classLista_1_1iterator.html">iterator</a> it = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    }  </div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
+<div class="line"><a name="l00737"></a><span class="lineno"><a class="line" href="classLista.html#afece5da6b5519b6749d0304bfdae829a">  737</a></span>&#160;    <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> <a class="code" href="classLista.html#afece5da6b5519b6749d0304bfdae829a">begin</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> it = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    }</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160; </div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
+<div class="line"><a name="l00747"></a><span class="lineno"><a class="line" href="classLista.html#a5249c778668cf965ca9f7e316d369ee3">  747</a></span>&#160;    <a class="code" href="classLista_1_1iterator.html">iterator</a> <a class="code" href="classLista.html#a5249c778668cf965ca9f7e316d369ee3">end</a>() {</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        <a class="code" href="classLista_1_1iterator.html">iterator</a> it = this-&gt;rabo_;</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    }</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160; </div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
+<div class="line"><a name="l00757"></a><span class="lineno"><a class="line" href="classLista.html#ae1a548d9c63c8d20db5cec04506bca40">  757</a></span>&#160;    <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> <a class="code" href="classLista.html#ae1a548d9c63c8d20db5cec04506bca40">end</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        <a class="code" href="classLista_1_1const__iterator.html">const_iterator</a> it = this-&gt;rabo_;</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    }</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160; </div>
+<div class="line"><a name="l00769"></a><span class="lineno"><a class="line" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">  769</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* a, <span class="keyword">const</span> <span class="keywordtype">void</span>* b) {</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        <span class="keywordtype">int</span> aa = *((<span class="keywordtype">int</span>*) a);</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;        <span class="keywordtype">int</span> bb = *((<span class="keywordtype">int</span>*) b);</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;        <span class="keywordflow">return</span> aa - bb;</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    }</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160; </div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160; </div>
+<div class="line"><a name="l00781"></a><span class="lineno"><a class="line" href="classLista.html#af5c0ea928a130c5c2b58074ef4826e90">  781</a></span>&#160;    <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* <a class="code" href="classLista.html#af5c0ea928a130c5c2b58074ef4826e90">mergeSort</a>(<span class="keywordtype">int</span> (*<a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>)(<span class="keyword">const</span> <span class="keywordtype">void</span>*, <span class="keyword">const</span> <span class="keywordtype">void</span>*)) {</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;        <span class="keywordflow">if</span> (this-&gt;longitud_ &lt; 2) {</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;            <span class="keywordflow">return</span> this-&gt;<a class="code" href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">copia</a>();</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;        }</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;        <span class="keywordtype">int</span> lon = this-&gt;longitud_;</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        <span class="keywordtype">int</span> m = lon / 2;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* lista = <span class="keyword">new</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>();</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;        <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* l = <span class="keyword">new</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>();</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        <a class="code" href="classLista_1_1Nodo.html">Nodo&lt;T&gt;</a>* n = this-&gt;cabeza_;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordtype">int</span> contador = 0;</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        <span class="keywordflow">while</span> (n != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;            <span class="keywordflow">if</span> (contador &lt; m) {</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;                lista-&gt;<a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(n-&gt;elemento_);</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;                n = n-&gt;siguiente_;</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                l-&gt;<a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(n-&gt;elemento_);</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                n = n-&gt;siguiente_;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;            }</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;            contador += 1;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        }</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;        lista = lista-&gt;<a class="code" href="classLista.html#af5c0ea928a130c5c2b58074ef4826e90">mergeSort</a>(<a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>);</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        l = l-&gt;<a class="code" href="classLista.html#af5c0ea928a130c5c2b58074ef4826e90">mergeSort</a>(<a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>);</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        <span class="keywordflow">return</span> merge(lista, l, <a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>);</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    }</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160; </div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160; </div>
+<div class="line"><a name="l00812"></a><span class="lineno"><a class="line" href="classLista.html#a94aab287a822e0b48658c6b4c656d40a">  812</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* <a class="code" href="classLista.html#a94aab287a822e0b48658c6b4c656d40a">mergeSort</a>(<a class="code" href="classLista.html">Lista&lt;T&gt;</a>* lista) {</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        <span class="keywordflow">return</span> lista-&gt;<a class="code" href="classLista.html#af5c0ea928a130c5c2b58074ef4826e90">mergeSort</a>(<a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>);</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    }</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160; </div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160; </div>
+<div class="line"><a name="l00824"></a><span class="lineno"><a class="line" href="classLista.html#a61d2b218824873da1ab5eb8fd3c61aa4">  824</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classLista.html#a61d2b218824873da1ab5eb8fd3c61aa4">busquedaLineal</a>(T elemento, <span class="keywordtype">int</span> (*<a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>)(<span class="keyword">const</span> <span class="keywordtype">void</span>*, <span class="keyword">const</span> <span class="keywordtype">void</span>*)) {</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        <a class="code" href="classLista_1_1iterator.html">Lista&lt;T&gt;::iterator</a> it = this-&gt;<a class="code" href="classLista.html#a6e3fd030d96b421dead3de5c0a0f1d6f">begin</a>();</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        <a class="code" href="classLista_1_1iterator.html">Lista&lt;T&gt;::iterator</a> i = this-&gt;<a class="code" href="classLista.html#a5249c778668cf965ca9f7e316d369ee3">end</a>();</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        <span class="keywordflow">while</span> (it != i) {</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;            T e = *(it);</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>(&amp;elemento, &amp;e) == 0) {</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;            }</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;            it++;</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;        }</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;    }</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160; </div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160; </div>
+<div class="line"><a name="l00845"></a><span class="lineno"><a class="line" href="classLista.html#a6340c66e8b97882c4e01a862ec51633f">  845</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classLista.html#a6340c66e8b97882c4e01a862ec51633f">busquedaLineal</a>(<a class="code" href="classLista.html">Lista&lt;T&gt;</a>* lista, T elemento) {</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;        <span class="keywordflow">return</span> lista-&gt;<a class="code" href="classLista.html#a61d2b218824873da1ab5eb8fd3c61aa4">busquedaLineal</a>(elemento, <a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>);</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    }</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160; </div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160; </div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160; </div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160; </div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* merge(<a class="code" href="classLista.html">Lista&lt;T&gt;</a>* lista, <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* l,</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;                    <span class="keywordtype">int</span> (*<a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>)(<span class="keyword">const</span> <span class="keywordtype">void</span>*, <span class="keyword">const</span> <span class="keywordtype">void</span>*)) {</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;        Nodo&lt;T&gt;* nodo = lista-&gt;cabeza_;</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        Nodo&lt;T&gt;* n = l-&gt;cabeza_;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        <a class="code" href="classLista.html">Lista&lt;T&gt;</a>* ordenada = <span class="keyword">new</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a>();</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        <span class="keywordflow">while</span> (nodo != <span class="keyword">nullptr</span> &amp;&amp; n != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">compara</a>(nodo, n) &lt;= 0) {</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;                ordenada-&gt;<a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(nodo-&gt;elemento_);</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                nodo = nodo-&gt;siguiente_;</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;                ordenada-&gt;<a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(n-&gt;elemento_);</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;                n = n-&gt;siguiente_;</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;            }</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        }</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        <span class="keywordflow">while</span> (nodo != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;            ordenada-&gt;<a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(nodo-&gt;elemento_);</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;            nodo = nodo-&gt;siguiente_;</div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;        }</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;        <span class="keywordflow">while</span> (n != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;            ordenada-&gt;<a class="code" href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">agregaFinal</a>(n-&gt;elemento_);</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;            n = n-&gt;siguiente_;</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;        }</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;        <span class="keywordflow">return</span> ordenada;</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    }</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160; </div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160; </div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;};</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160; </div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160; </div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LISTA_CPP */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aColeccion_8hpp_html"><div class="ttname"><a href="Coleccion_8hpp.html">Coleccion.hpp</a></div><div class="ttdoc">Interface para colecciones.</div></div>
+<div class="ttc" id="aclassColeccion_html"><div class="ttname"><a href="classColeccion.html">Coleccion</a></div><div class="ttdef"><b>Definition:</b> <a href="Coleccion_8hpp_source.html#l00013">Coleccion.hpp:13</a></div></div>
+<div class="ttc" id="aclassLista_1_1Nodo_html"><div class="ttname"><a href="classLista_1_1Nodo.html">Lista::Nodo</a></div><div class="ttdoc">Clase interna privada para nodos.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00032">Lista.cpp:32</a></div></div>
+<div class="ttc" id="aclassLista_1_1Nodo_html_a418d71d858d804e29bda6def76b99ea2"><div class="ttname"><a href="classLista_1_1Nodo.html#a418d71d858d804e29bda6def76b99ea2">Lista::Nodo::operator!=</a></div><div class="ttdeci">friend bool operator!=(const Nodo&lt; T &gt; &amp;nodo, const Nodo&lt; T &gt; &amp;n)</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00068">Lista.cpp:68</a></div></div>
+<div class="ttc" id="aclassLista_1_1Nodo_html_a67ad7a5e02803aa289e13d94febc1eb5"><div class="ttname"><a href="classLista_1_1Nodo.html#a67ad7a5e02803aa289e13d94febc1eb5">Lista::Nodo::operator==</a></div><div class="ttdeci">friend bool operator==(const Nodo&lt; T &gt; &amp;nodo, const Nodo&lt; T &gt; &amp;n)</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00062">Lista.cpp:62</a></div></div>
+<div class="ttc" id="aclassLista_1_1Nodo_html_a9468095934923903c5b12852badbd70d"><div class="ttname"><a href="classLista_1_1Nodo.html#a9468095934923903c5b12852badbd70d">Lista::Nodo::getSiguiente</a></div><div class="ttdeci">Nodo * getSiguiente()</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00056">Lista.cpp:56</a></div></div>
+<div class="ttc" id="aclassLista_1_1Nodo_html_ae7c3e7f7c5061211673528c96c190e01"><div class="ttname"><a href="classLista_1_1Nodo.html#ae7c3e7f7c5061211673528c96c190e01">Lista::Nodo::Nodo</a></div><div class="ttdeci">Nodo(T elemento)</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00051">Lista.cpp:51</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html"><div class="ttname"><a href="classLista_1_1const__iterator.html">Lista::const_iterator</a></div><div class="ttdoc">Clase para iteradores.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00079">Lista.cpp:79</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_a4a417ddb73f698a9ce83f3eb0aee2ca3"><div class="ttname"><a href="classLista_1_1const__iterator.html#a4a417ddb73f698a9ce83f3eb0aee2ca3">Lista::const_iterator::operator--</a></div><div class="ttdeci">const_iterator operator--(int)</div><div class="ttdoc">Sobreescribimos el operador –.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00161">Lista.cpp:161</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_a53bb2e4373e0add7f45b06f343c71ba0"><div class="ttname"><a href="classLista_1_1const__iterator.html#a53bb2e4373e0add7f45b06f343c71ba0">Lista::const_iterator::operator--</a></div><div class="ttdeci">const_iterator &amp; operator--()</div><div class="ttdoc">Sobreescribimos el operador –.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00152">Lista.cpp:152</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_a54083b3b8e56faccde1e346300682a9c"><div class="ttname"><a href="classLista_1_1const__iterator.html#a54083b3b8e56faccde1e346300682a9c">Lista::const_iterator::retrieve</a></div><div class="ttdeci">T &amp; retrieve() const</div><div class="ttdoc">Regresamos una referencia del elemento del iterador.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00098">Lista.cpp:98</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_a57046bf39a5fb89d23f6248b207884f5"><div class="ttname"><a href="classLista_1_1const__iterator.html#a57046bf39a5fb89d23f6248b207884f5">Lista::const_iterator::operator==</a></div><div class="ttdeci">bool operator==(const const_iterator &amp;i) const</div><div class="ttdoc">Sobreescribimos el operador ==.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00171">Lista.cpp:171</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_a5c2ef5d0e6a8c17624120fe05acaaf92"><div class="ttname"><a href="classLista_1_1const__iterator.html#a5c2ef5d0e6a8c17624120fe05acaaf92">Lista::const_iterator::operator++</a></div><div class="ttdeci">const_iterator operator++(int)</div><div class="ttdoc">Sobreescribimos el operador ++.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00142">Lista.cpp:142</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_a78337698383da17355511b444a645d4d"><div class="ttname"><a href="classLista_1_1const__iterator.html#a78337698383da17355511b444a645d4d">Lista::const_iterator::operator*</a></div><div class="ttdeci">const T &amp; operator*() const</div><div class="ttdoc">Sobreescribimos el operador *.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00125">Lista.cpp:125</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_a869c20b0bb260284707a28eb22e77252"><div class="ttname"><a href="classLista_1_1const__iterator.html#a869c20b0bb260284707a28eb22e77252">Lista::const_iterator::const_iterator</a></div><div class="ttdeci">const_iterator(Nodo&lt; T &gt; *current)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00106">Lista.cpp:106</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_aaec39f74668242c34550a44409ab7dd0"><div class="ttname"><a href="classLista_1_1const__iterator.html#aaec39f74668242c34550a44409ab7dd0">Lista::const_iterator::operator++</a></div><div class="ttdeci">const_iterator &amp; operator++()</div><div class="ttdoc">Sobreescribimos el operador ++.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00133">Lista.cpp:133</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_ab859a763502df616bc63b8875bcff3c4"><div class="ttname"><a href="classLista_1_1const__iterator.html#ab859a763502df616bc63b8875bcff3c4">Lista::const_iterator::operator!=</a></div><div class="ttdeci">bool operator!=(const const_iterator &amp;i) const</div><div class="ttdoc">Sobreescribimos el operador !=.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00179">Lista.cpp:179</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_ade0d519a71bd5e4e70176150d5d43bb8"><div class="ttname"><a href="classLista_1_1const__iterator.html#ade0d519a71bd5e4e70176150d5d43bb8">Lista::const_iterator::const_iterator</a></div><div class="ttdeci">const_iterator()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00117">Lista.cpp:117</a></div></div>
+<div class="ttc" id="aclassLista_1_1const__iterator_html_ade5c7bef3a54e4261dcddcd1f8e54797"><div class="ttname"><a href="classLista_1_1const__iterator.html#ade5c7bef3a54e4261dcddcd1f8e54797">Lista::const_iterator::current</a></div><div class="ttdeci">Nodo&lt; T &gt; * current</div><div class="ttdoc">Nodo actual.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00088">Lista.cpp:88</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html"><div class="ttname"><a href="classLista_1_1iterator.html">Lista::iterator</a></div><div class="ttdoc">Clase para iteradores.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00190">Lista.cpp:190</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html_a13c0f64792c5e891119b8b1ff6467c4a"><div class="ttname"><a href="classLista_1_1iterator.html#a13c0f64792c5e891119b8b1ff6467c4a">Lista::iterator::operator*</a></div><div class="ttdeci">T &amp; operator*()</div><div class="ttdoc">Sobreescribimos el operador *.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00218">Lista.cpp:218</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html_a3db5a8852dcf7362b8e426573bec82d7"><div class="ttname"><a href="classLista_1_1iterator.html#a3db5a8852dcf7362b8e426573bec82d7">Lista::iterator::operator*</a></div><div class="ttdeci">const T &amp; operator*() const</div><div class="ttdoc">Sobreescribimos el operador *.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00226">Lista.cpp:226</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html_a627b0d48b63e722ac6482202fa55ff56"><div class="ttname"><a href="classLista_1_1iterator.html#a627b0d48b63e722ac6482202fa55ff56">Lista::iterator::operator--</a></div><div class="ttdeci">iterator &amp; operator--()</div><div class="ttdoc">Sobreescribimos el operador –.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00253">Lista.cpp:253</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html_ab9acadb013834347decfb0dec501c67e"><div class="ttname"><a href="classLista_1_1iterator.html#ab9acadb013834347decfb0dec501c67e">Lista::iterator::operator++</a></div><div class="ttdeci">iterator operator++(int)</div><div class="ttdoc">Sobreescribimos el operador ++.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00243">Lista.cpp:243</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html_ad1242fc5736cb9600a9394a0085134ae"><div class="ttname"><a href="classLista_1_1iterator.html#ad1242fc5736cb9600a9394a0085134ae">Lista::iterator::iterator</a></div><div class="ttdeci">iterator(Nodo&lt; T &gt; *p)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00199">Lista.cpp:199</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html_adcc935c3094927d08b6681383d2a50e2"><div class="ttname"><a href="classLista_1_1iterator.html#adcc935c3094927d08b6681383d2a50e2">Lista::iterator::operator++</a></div><div class="ttdeci">iterator &amp; operator++()</div><div class="ttdoc">Sobreescribimos el operador ++.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00234">Lista.cpp:234</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html_af8fb00774ba97264757ccc3190865b7a"><div class="ttname"><a href="classLista_1_1iterator.html#af8fb00774ba97264757ccc3190865b7a">Lista::iterator::iterator</a></div><div class="ttdeci">iterator()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00212">Lista.cpp:212</a></div></div>
+<div class="ttc" id="aclassLista_1_1iterator_html_afe3a372cf022c73557a2decb493d7e54"><div class="ttname"><a href="classLista_1_1iterator.html#afe3a372cf022c73557a2decb493d7e54">Lista::iterator::operator--</a></div><div class="ttdeci">iterator operator--(int)</div><div class="ttdoc">Sobreescribimos el operador –.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00262">Lista.cpp:262</a></div></div>
+<div class="ttc" id="aclassLista_html"><div class="ttname"><a href="classLista.html">Lista</a></div><div class="ttdef"><b>Definition:</b> <a href="Lista_8hpp_source.html#l00018">Lista.hpp:18</a></div></div>
+<div class="ttc" id="aclassLista_html_a05d0714c8087cc0937dc63537aa57c29"><div class="ttname"><a href="classLista.html#a05d0714c8087cc0937dc63537aa57c29">Lista::eliminaPrimero</a></div><div class="ttdeci">T eliminaPrimero()</div><div class="ttdoc">Elimina el primer elemento de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00586">Lista.cpp:586</a></div></div>
+<div class="ttc" id="aclassLista_html_a06f3a733528037a2057915ec03f307c4"><div class="ttname"><a href="classLista.html#a06f3a733528037a2057915ec03f307c4">Lista::elimina</a></div><div class="ttdeci">void elimina(T elemento)</div><div class="ttdoc">Elimina un elemento de la colección.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00356">Lista.cpp:356</a></div></div>
+<div class="ttc" id="aclassLista_html_a0e460a5eea8b3f8ed7a0d1c5fdf461bd"><div class="ttname"><a href="classLista.html#a0e460a5eea8b3f8ed7a0d1c5fdf461bd">Lista::getLongitud</a></div><div class="ttdeci">int getLongitud()</div><div class="ttdoc">Regresa el número de elementos de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00506">Lista.cpp:506</a></div></div>
+<div class="ttc" id="aclassLista_html_a3257e3d3c45b1c3cb11d0ff19edcdfea"><div class="ttname"><a href="classLista.html#a3257e3d3c45b1c3cb11d0ff19edcdfea">Lista::contiene</a></div><div class="ttdeci">bool contiene(T elemento)</div><div class="ttdoc">Nos indica sí un elemento pertene a la colección.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00389">Lista.cpp:389</a></div></div>
+<div class="ttc" id="aclassLista_html_a34d91ad92f54e7aad8df220c2e962982"><div class="ttname"><a href="classLista.html#a34d91ad92f54e7aad8df220c2e962982">Lista::compara</a></div><div class="ttdeci">static int compara(const void *a, const void *b)</div><div class="ttdoc">Función genérica para comparar elementos.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00769">Lista.cpp:769</a></div></div>
+<div class="ttc" id="aclassLista_html_a37d07dd9b2e41f9779a280c8632f46bd"><div class="ttname"><a href="classLista.html#a37d07dd9b2e41f9779a280c8632f46bd">Lista::~Lista</a></div><div class="ttdeci">virtual ~Lista()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00328">Lista.cpp:328</a></div></div>
+<div class="ttc" id="aclassLista_html_a3a24c5d326773088e5fbd56e8b249207"><div class="ttname"><a href="classLista.html#a3a24c5d326773088e5fbd56e8b249207">Lista::copia</a></div><div class="ttdeci">Lista&lt; T &gt; * copia()</div><div class="ttdoc">Regresamos un puntero a la copia de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00677">Lista.cpp:677</a></div></div>
+<div class="ttc" id="aclassLista_html_a5249c778668cf965ca9f7e316d369ee3"><div class="ttname"><a href="classLista.html#a5249c778668cf965ca9f7e316d369ee3">Lista::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">Mueve el iterador al final.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00747">Lista.cpp:747</a></div></div>
+<div class="ttc" id="aclassLista_html_a59acc9f2302e1b6b448beca58888abba"><div class="ttname"><a href="classLista.html#a59acc9f2302e1b6b448beca58888abba">Lista::operator!=</a></div><div class="ttdeci">friend bool operator!=(const Lista&lt; T &gt; &amp;lista, const Lista&lt; T &gt; &amp;l)</div><div class="ttdoc">Sobreescribimos el operador ==.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00496">Lista.cpp:496</a></div></div>
+<div class="ttc" id="aclassLista_html_a60c926b4a656a0c6345a7b3f65db842c"><div class="ttname"><a href="classLista.html#a60c926b4a656a0c6345a7b3f65db842c">Lista::esVacia</a></div><div class="ttdeci">bool esVacia()</div><div class="ttdoc">Nos indica sí la colección está vacía, es decir, no tiene ningún elemento.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00405">Lista.cpp:405</a></div></div>
+<div class="ttc" id="aclassLista_html_a61d2b218824873da1ab5eb8fd3c61aa4"><div class="ttname"><a href="classLista.html#a61d2b218824873da1ab5eb8fd3c61aa4">Lista::busquedaLineal</a></div><div class="ttdeci">bool busquedaLineal(T elemento, int(*compara)(const void *, const void *))</div><div class="ttdoc">Busca un elemento en una lista ordenada.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00824">Lista.cpp:824</a></div></div>
+<div class="ttc" id="aclassLista_html_a61e3b12b33b2c4008f7373c83f13a3df"><div class="ttname"><a href="classLista.html#a61e3b12b33b2c4008f7373c83f13a3df">Lista::operator==</a></div><div class="ttdeci">friend bool operator==(const Lista&lt; T &gt; &amp;lista, const Lista&lt; T &gt; &amp;l)</div><div class="ttdoc">Sobreescribimos el operador ==.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00475">Lista.cpp:475</a></div></div>
+<div class="ttc" id="aclassLista_html_a6340c66e8b97882c4e01a862ec51633f"><div class="ttname"><a href="classLista.html#a6340c66e8b97882c4e01a862ec51633f">Lista::busquedaLineal</a></div><div class="ttdeci">static bool busquedaLineal(Lista&lt; T &gt; *lista, T elemento)</div><div class="ttdoc">Busca un elemento en una lista ordenada.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00845">Lista.cpp:845</a></div></div>
+<div class="ttc" id="aclassLista_html_a6598a7cd7914bc597d8eeb3e0e0b6b0a"><div class="ttname"><a href="classLista.html#a6598a7cd7914bc597d8eeb3e0e0b6b0a">Lista::agregaInicio</a></div><div class="ttdeci">void agregaInicio(T elemento)</div><div class="ttdoc">Agrega un elemento al final de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00538">Lista.cpp:538</a></div></div>
+<div class="ttc" id="aclassLista_html_a6a58d9e1913ca5f1c02b64164712b620"><div class="ttname"><a href="classLista.html#a6a58d9e1913ca5f1c02b64164712b620">Lista::getElementos</a></div><div class="ttdeci">int getElementos()</div><div class="ttdoc">Nos regresa el número de elementos de la colección.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00415">Lista.cpp:415</a></div></div>
+<div class="ttc" id="aclassLista_html_a6b110121436300dcafafd0dbde66b3a7"><div class="ttname"><a href="classLista.html#a6b110121436300dcafafd0dbde66b3a7">Lista::agrega</a></div><div class="ttdeci">void agrega(T elemento)</div><div class="ttdoc">Agrega un elemento a la colección.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00339">Lista.cpp:339</a></div></div>
+<div class="ttc" id="aclassLista_html_a6e3fd030d96b421dead3de5c0a0f1d6f"><div class="ttname"><a href="classLista.html#a6e3fd030d96b421dead3de5c0a0f1d6f">Lista::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdoc">Mueve el iterador al inicio.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00727">Lista.cpp:727</a></div></div>
+<div class="ttc" id="aclassLista_html_a7c40d476795af5b614b9ca02198e7792"><div class="ttname"><a href="classLista.html#a7c40d476795af5b614b9ca02198e7792">Lista::inserta</a></div><div class="ttdeci">void inserta(int i, T elemento)</div><div class="ttdoc">Inserta un elemento en un índice explícito.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00560">Lista.cpp:560</a></div></div>
+<div class="ttc" id="aclassLista_html_a86fd8392e2c7b49b89fed7f8e0a202a5"><div class="ttname"><a href="classLista.html#a86fd8392e2c7b49b89fed7f8e0a202a5">Lista::reversa</a></div><div class="ttdeci">Lista&lt; T &gt; * reversa()</div><div class="ttdoc">Regresamos un puntero a una reversa de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00692">Lista.cpp:692</a></div></div>
+<div class="ttc" id="aclassLista_html_a90bb9992fc9e33eb3a0c7c7fca5ade93"><div class="ttname"><a href="classLista.html#a90bb9992fc9e33eb3a0c7c7fca5ade93">Lista::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;strm, const Lista&lt; T &gt; &amp;lista)</div><div class="ttdoc">Sobreescribimos el operador &lt;&lt;.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00467">Lista.cpp:467</a></div></div>
+<div class="ttc" id="aclassLista_html_a94aab287a822e0b48658c6b4c656d40a"><div class="ttname"><a href="classLista.html#a94aab287a822e0b48658c6b4c656d40a">Lista::mergeSort</a></div><div class="ttdeci">static Lista&lt; T &gt; * mergeSort(Lista&lt; T &gt; *lista)</div><div class="ttdoc">Algoritmo mergeSort.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00812">Lista.cpp:812</a></div></div>
+<div class="ttc" id="aclassLista_html_a95981afce9cc430cfb1b69803e6efd4d"><div class="ttname"><a href="classLista.html#a95981afce9cc430cfb1b69803e6efd4d">Lista::limpia</a></div><div class="ttdeci">void limpia()</div><div class="ttdoc">Limpia la colección.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00424">Lista.cpp:424</a></div></div>
+<div class="ttc" id="aclassLista_html_ac032095f5cacf7efc7e34c8ec0fd7da6"><div class="ttname"><a href="classLista.html#ac032095f5cacf7efc7e34c8ec0fd7da6">Lista::agregaFinal</a></div><div class="ttdeci">void agregaFinal(T elemento)</div><div class="ttdoc">Agrega un elemento al final de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00517">Lista.cpp:517</a></div></div>
+<div class="ttc" id="aclassLista_html_ac57bbb2870c0e6988f1834e6538d94a2"><div class="ttname"><a href="classLista.html#ac57bbb2870c0e6988f1834e6538d94a2">Lista::getPrimero</a></div><div class="ttdeci">T getPrimero()</div><div class="ttdoc">Regresa el primer elemento de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00630">Lista.cpp:630</a></div></div>
+<div class="ttc" id="aclassLista_html_ad4015dbc5ba14035dd44f1185ef87d25"><div class="ttname"><a href="classLista.html#ad4015dbc5ba14035dd44f1185ef87d25">Lista::indiceDe</a></div><div class="ttdeci">int indiceDe(T elemento)</div><div class="ttdoc">Regresamos el índice del elemento recibido en la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00709">Lista.cpp:709</a></div></div>
+<div class="ttc" id="aclassLista_html_addc6cbbd469cc6bc89b039da7b595210"><div class="ttname"><a href="classLista.html#addc6cbbd469cc6bc89b039da7b595210">Lista::eliminaUltimo</a></div><div class="ttdeci">T eliminaUltimo()</div><div class="ttdoc">Elimina el último elemento de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00608">Lista.cpp:608</a></div></div>
+<div class="ttc" id="aclassLista_html_ae1a548d9c63c8d20db5cec04506bca40"><div class="ttname"><a href="classLista.html#ae1a548d9c63c8d20db5cec04506bca40">Lista::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdoc">Mueve el iterador al final.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00757">Lista.cpp:757</a></div></div>
+<div class="ttc" id="aclassLista_html_ae5adc54ec0f6cef36e86ad61b493e5ab"><div class="ttname"><a href="classLista.html#ae5adc54ec0f6cef36e86ad61b493e5ab">Lista::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">Representación en cadena de las listas.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00442">Lista.cpp:442</a></div></div>
+<div class="ttc" id="aclassLista_html_af01d85a076fe148343d81e70355ea1a5"><div class="ttname"><a href="classLista.html#af01d85a076fe148343d81e70355ea1a5">Lista::getUltimo</a></div><div class="ttdeci">T getUltimo()</div><div class="ttdoc">Regresa el último elemento de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00643">Lista.cpp:643</a></div></div>
+<div class="ttc" id="aclassLista_html_af4b8fce4b46de279b34a0c0bd9b2bcd0"><div class="ttname"><a href="classLista.html#af4b8fce4b46de279b34a0c0bd9b2bcd0">Lista::get</a></div><div class="ttdeci">T get(int i)</div><div class="ttdoc">Regresa el i-ésimo elemento de la lista.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00657">Lista.cpp:657</a></div></div>
+<div class="ttc" id="aclassLista_html_af5c0ea928a130c5c2b58074ef4826e90"><div class="ttname"><a href="classLista.html#af5c0ea928a130c5c2b58074ef4826e90">Lista::mergeSort</a></div><div class="ttdeci">Lista&lt; T &gt; * mergeSort(int(*compara)(const void *, const void *))</div><div class="ttdoc">Algoritmo mergeSort.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00781">Lista.cpp:781</a></div></div>
+<div class="ttc" id="aclassLista_html_afece5da6b5519b6749d0304bfdae829a"><div class="ttname"><a href="classLista.html#afece5da6b5519b6749d0304bfdae829a">Lista::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdoc">Mueve el iterador al inicio.</div><div class="ttdef"><b>Definition:</b> <a href="Lista_8cpp_source.html#l00737">Lista.cpp:737</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>
